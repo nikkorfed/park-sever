@@ -1,0 +1,25 @@
+section.contact
+  form
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    +small
+      flex-direction: row
+      align-items: stretch
+
+    input
+      +inner-offset(margin-bottom)
+
+      +small
+        +inner-offset(margin-right)
+        margin-bottom: 0
+        width: unset
+
+    .button
+      display: flex
+      justify-content: center
+      align-items: center
+
+  & + .info
+    background-color: $backgroundLightGrey
