@@ -1,0 +1,135 @@
+body
+  font-family: $font
+  font-size: $fontSize
+  font-weight: 500
+  line-height: $lineHeight
+  color: $grey
+  -webkit-font-smoothing: antialiased
+
+  +medium
+    font-size: $mediumFontSize
+
+.max-width
+  max-width: $maxTextWidth
+  
+h1
+  margin: 0
+  +outer-offset(margin-bottom)
+  font-size: $h1Size
+  color: $black
+
+  +small
+    font-size: $smallH1Size
+
+  +medium
+    font-size: $mediumH1Size
+
+h2
+  margin: 0
+  +outer-offset(margin-bottom)
+  font-size: $h2Size
+  color: $black
+
+  &::after
+    display: block
+    margin-top: 5px
+    height: 4px
+    width: 50px
+    content: ''
+    background-color: $primaryColor
+
+  +small
+    font-size: $smallH2Size
+
+  +medium
+    font-size: $mediumH2Size
+
+h3
+  margin: 0
+  +inner-offset(margin-bottom)
+  font-size: $h3Size
+  color: $black
+
+  +small
+    font-size: $smallH3Size
+
+  +medium
+    font-size: $mediumH3Size
+
+.overtitle
+  font-size: $overtitleSize
+  font-weight: bold
+  text-transform: uppercase
+  letter-spacing: 2.5px
+  color: $almostWhite
+
+  +medium
+    font-size: $mediumOvertitleSize
+
+.subtitle
+  +outer-offset(margin-bottom)
+  font-size: $subtitleSize
+
+  +medium
+    font-size: $mediumSubtitleSize
+
+p
+  margin: 0
+  +inner-offset(margin-bottom)
+  line-height: 1.8
+
+  a
+    border-bottom: 1px solid transparentize($primaryColor, .5)
+    color: $primaryColor
+
+a
+  text-decoration: none
+  color: inherit
+
+ul
+  margin: 0
+  +inner-offset(margin-bottom)
+  padding-left: 0
+  line-height: 1.8
+  list-style: none
+
+  li
+    position: relative
+    margin-bottom: 5px
+    padding-left: 20px
+
+    &::before
+      display: inline-block
+      position: absolute
+      top: 10px
+      left: 0
+      +inner-offset(margin-right)
+      height: 2px
+      width: 10px
+      background-color: $secondaryColor
+      content: ''
+
+      +medium
+        top: 13px
+
+hr
+  margin: 0
+  +inner-offset(margin-bottom)
+  border: none
+  height: 1px
+  background-color: $borderGrey
+  appearance: none
+
+.dark
+  h2, h3, .overtitle, .subtitle, p, ul
+    color: $white
+
+  ul li::before
+    background-color: $primaryColor
+
+.nowrap
+  white-space: nowrap
+
+.bold
+  font-weight: bold
+  color: $black

@@ -1,0 +1,17 @@
+.equipment
+  background-image: linear-gradient(to right, $backgroundGrey 0%, change-color($backgroundGrey, $alpha: .3)), url('/images/equipment/color-picking-lab.jpg')
+  background-position: 50% 50%
+  background-repeat: no-repeat
+  background-size: cover
+
+  +medium
+    background-image: linear-gradient(to right, $backgroundGrey 0%, change-color($backgroundGrey, $alpha: .0)), url('/images/equipment/color-picking-lab.jpg')
+
+  ul
+    +inner-offset(margin-bottom)
+
+  .button-simple
+    +outer-offset(margin-bottom)
+
+#equipment-popup
+  display: none

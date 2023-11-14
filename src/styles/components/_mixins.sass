@@ -1,0 +1,169 @@
+// Размеры экрана
+
+=min
+  @media (max-width: $minWrapperWidth)
+    @content
+
+=extra-small
+  @media (min-width: $extraSmallBreakpoint)
+    @content
+
+=small
+  @media (min-width: $smallBreakpoint)
+    @content
+
+=medium
+  @media (min-width: $mediumBreakpoint)
+    @content
+
+=large
+  @media (min-width: $largeBreakpoint)
+    @content
+
+=extra-large
+  @media (min-width: $extraLargeBreakpoint)
+    @content
+
+=max
+  @media (min-width: $maxWrapperWidth)
+    @content
+
+// Колонки
+
+=col-all
+  @each $size in '', '-sm', '-md', '-lg', '-xl'
+    @for $width from 1 through $columns
+      .col#{$size}-#{$width}
+        @content
+
+=col
+  .col-0
+    display: none
+  
+  @for $width from 1 through $columns
+    .col-#{$width}
+      @content
+      display: block
+      width: $width / $columns * 100%
+
+=col-sm
+  .col-sm-0
+    display: none
+  
+  @for $width from 1 through $columns
+    .col-sm-#{$width}
+      @content
+      display: block
+      width: $width / $columns * 100%
+
+=col-md
+  .col-md-0
+    display: none
+  
+  @for $width from 1 through $columns
+    .col-md-#{$width}
+      @content
+      display: block
+      width: $width / $columns * 100%
+
+=col-lg
+  .col-lg-0
+    display: none
+  
+  @for $width from 1 through $columns
+    .col-lg-#{$width}
+      @content
+      display: block
+      width: $width / $columns * 100%
+
+=col-xl
+  .col-xl-0
+    display: none
+  
+  @for $width from 1 through $columns
+    .col-xl-#{$width}
+      @content
+      display: block
+      width: $width / $columns * 100%
+
+// Отступы
+
+=outer-offset($properties...)
+  @each $property in $properties
+    #{$property}: $outerOffset
+
+  +small
+    @each $property in $properties
+      #{$property}: $smallOuterOffset
+
+  +medium
+    @each $property in $properties
+      #{$property}: $mediumOuterOffset
+
+  +large
+    @each $property in $properties
+      #{$property}: $largeOuterOffset
+
+=custom-outer-offset($value, $properties...)
+  @each $property in $properties
+    #{$property}: $outerOffset + $value
+
+  +small
+    @each $property in $properties
+      #{$property}: $smallOuterOffset + $value
+
+  +medium
+    @each $property in $properties
+      #{$property}: $mediumOuterOffset + $value
+
+  +large
+    @each $property in $properties
+      #{$property}: $largeOuterOffset + $value
+
+=negative-outer-offset($properties...)
+  @each $property in $properties
+    #{$property}: -$outerOffset
+
+  +small
+    @each $property in $properties
+      #{$property}: -$smallOuterOffset
+
+  +medium
+    @each $property in $properties
+      #{$property}: -$mediumOuterOffset
+
+  +large
+    @each $property in $properties
+      #{$property}: -$largeOuterOffset
+
+=inner-offset($properties...)
+  @each $property in $properties
+    #{$property}: $innerOffset
+
+  +small
+    @each $property in $properties
+      #{$property}: $smallInnerOffset
+
+  +medium
+    @each $property in $properties
+      #{$property}: $mediumInnerOffset
+
+  +large
+    @each $property in $properties
+      #{$property}: $largeInnerOffset
+
+=custom-inner-offset($value, $properties...)
+  @each $property in $properties
+    #{$property}: $innerOffset + $value
+
+  +small
+    @each $property in $properties
+      #{$property}: $smallInnerOffset + $value
+
+  +medium
+    @each $property in $properties
+      #{$property}: $mediumInnerOffset + $value
+
+  +large
+    @each $property in $properties
+      #{$property}: $largeInnerOffset + $value

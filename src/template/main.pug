@@ -1,0 +1,13 @@
+section.main
+  .wrapper
+    .path
+      a(href='/') Главная
+      each value, key in path
+        .arrow
+        a(href=key)= value
+      .arrow
+      span= title
+    .overtitle= category
+    h1= title
+    .max-width
+      .subtitle= subtitle

@@ -1,0 +1,277 @@
+.reviews
+  background-color: $backgroundLightGrey
+
+  .drive2, .yandex, .google
+    +negative-outer-offset(margin-left, margin-right)
+    
+    +small
+      margin: 0
+
+  .drive2 .logo
+    height: 30px
+    width: 80px
+    background-image: url('/images/reviews/drive2.svg')
+    background-color: #cc0033
+    background-size: 80px
+
+  .yandex .logo
+    width: 70px
+    background-image: url('/images/reviews/yandex.svg')
+    background-position: 50% 50%
+    background-size: 80px
+
+  .google .logo
+    width: 85px
+    background-image: url('/images/reviews/google.png')
+    background-position: 0 50%
+    background-size: 80px
+
+  .info
+    display: flex
+    align-items: center
+    margin-bottom: 2px
+    +inner-offset(padding-top, padding-bottom)
+    +outer-offset(padding-left, padding-right)
+    background-color: $backgroundWhite
+
+  .rows
+    display: flex
+    flex-direction: column
+    zoom: 90%
+
+    +small
+      flex-direction: row
+      zoom: none
+
+  .row
+    display: flex
+    align-items: center
+
+    &:first-child
+      margin-bottom: 5px
+
+      +small
+        margin-bottom: 0
+
+  .logo
+    overflow: hidden
+    +inner-offset(margin-right)
+    border-radius: $borderRadius
+    height: 40px
+    width: 100px
+    background-position: 50% 50%
+    background-repeat: no-repeat
+
+  .stars
+    +inner-offset(margin-right)
+
+  .rating
+    +inner-offset(margin-right)
+    font-weight: bold
+    color: $black
+    
+  .quantity
+    +inner-offset(margin-right)
+
+  .view-all
+    color: $almostWhite
+    transition: color .3s
+
+    &:hover
+      color: $primaryColor
+
+  .arrows
+    display: flex
+    margin-left: auto
+
+    div
+      border: none
+      border-radius: $borderRadius
+      height: 30px
+      width: 30px
+      background-color: $backgroundLightGrey
+      appearance: none
+      cursor: pointer
+
+      +small
+        height: 40px
+        width: 40px
+
+      &:first-child
+        margin-right: 10px
+        background-image: url('/images/icons/arrow-left.svg')
+        background-position: 50% 50%
+        background-repeat: no-repeat
+        background-size: 12px
+
+      &:last-child
+        background-image: url('/images/icons/arrow-right.svg')
+        background-position: 50% 50%
+        background-repeat: no-repeat
+        background-size: 12px
+
+  .container
+    +outer-offset(margin-bottom)
+
+  .owl-item
+    background-color: $backgroundWhite
+
+  .review
+    display: flex
+    flex-direction: column
+    +outer-offset(padding)
+    height: 100%
+    background-color: $backgroundWhite
+    transition: box-shadow .3s, transform .3s
+
+  a.review:hover
+    box-shadow: inset 0 0 0 2px $primaryColor
+    // transform: translateY(-5px)
+
+    .user
+      color: $primaryColor
+  
+  .head
+    display: flex
+    align-items: center
+    +inner-offset(margin-bottom)
+
+    .image, .user-icon-view
+      display: flex
+      justify-content: center
+      align-items: center
+      +outer-offset(margin-right)
+      border-radius: 100%
+      height: 50px
+      width: 50px
+      color: $white
+      object-fit: cover
+
+    .user
+      font-weight: bold
+      color: $black
+      transition: color .3s
+
+    .date
+      color: $lightGrey
+
+    .icon
+      margin-left: auto
+      margin-right: 10px
+      height: 20px
+      width: 20px
+
+  .text
+    position: relative
+    font-size: $fontSize !important
+    word-break: break-word
+
+    +medium
+      font-size: $mediumFontSize !important
+
+    &::after
+      display: block
+      position: absolute
+      bottom: 0
+      height: 30px
+      width: 100%
+      content: '' 
+      background-image: linear-gradient(to bottom, transparentize($backgroundWhite, 1), $backgroundWhite)
+
+  .scrollable
+    overflow-y: auto
+    max-height: 125px
+
+    &::-webkit-scrollbar
+      width: 0
+  
+  .article
+    display: flex
+    overflow-x: hidden
+    position: relative
+    +inner-offset(margin-top)
+    white-space: nowrap
+
+    .image
+      +outer-offset(margin-right)
+      border-radius: $borderRadius
+      height: 50px
+      width: 80px
+      object-fit: cover
+
+    .title
+      color: $primaryColor
+
+    .car
+      color: $lightGrey
+
+    &::after
+      display: block
+      position: absolute
+      right: 0
+      height: 100%
+      width: 20px
+      content: ''
+      background-image: linear-gradient(to right, transparentize($backgroundWhite, 1), $backgroundWhite)
+
+  // Фоны аватаров для Яндекса
+
+  ._icon_1
+    background-color: #b37db3
+
+  ._icon_2
+    background-color: #f29d61
+
+  ._icon_3
+    background-color: #50c0e6
+
+  ._icon_4
+    background-color: #6ca632
+
+  ._icon_5
+    background-color: #f285aa
+
+  ._icon_6
+    background-color: #8585cc
+
+  ._icon_7
+    background-color: #5798d9
+
+  // Звезды от Яндекса
+
+  .yandex .business-rating-badge-view__star
+    display: inline-block
+    height: 12px
+    width: 12px
+    background-image: url("https://yastatic.net/s3/front-maps-static/front-maps/_/178df0f18f6025c2e764130c7d1ac463.svg")
+    background-size: contain
+    background-position: center
+    background-repeat: no-repeat
+
+    &._half
+      background-image: url("https://yastatic.net/s3/front-maps-static/front-maps/_/a53d90b8e3365aa721fcf6939fa3f81a.svg")
+
+    &._empty
+      background-image: url("https://yastatic.net/s3/front-maps-static/front-maps/_/ee15bab6241eec6618f0f5720fa6daa9.svg")
+
+    &:not(:last-child)
+      margin-right: 4px
+
+  // Звезды от Гугла
+  
+  .google .stars
+    height: 12px
+    width: 64px
+    background-image: url("/images/reviews/google-stars.png")
+    background-position: 0 50%
+    background-repeat: repeat-x
+    background-size: contain
+
+    .filler
+      height: 100%
+      max-width: 100%
+      background-image: url("/images/reviews/google-stars-filler.png")
+      background-position: 0 50%
+      background-repeat: repeat-x
+      background-size: contain
+        

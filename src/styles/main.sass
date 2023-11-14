@@ -1,0 +1,82 @@
+@import 'components/index'
+@import 'blocks/index'
+
+*
+  box-sizing: border-box
+  
+body
+  position: relative
+  margin: 0
+  zoom: 90%
+
+  &.mobile-menu-open
+    overflow: hidden
+
+  +min
+    zoom: 85%
+
+  +small
+    zoom: 100%
+
+.disabled
+  display: none
+
+section
+  &.grey
+    background-color: $backgroundLightGrey
+  &.dark
+    background-color: $backgroundGrey
+
+.wrapper
+  margin: 0 auto
+  +outer-offset(padding)
+  height: 100%
+  max-width: $maxWrapperWidth
+
+  &::before, &::after
+    display: table-cell
+    clear: both
+    content: ''
+
+.block
+  +outer-offset(margin-bottom, padding)
+  border-radius: $borderRadius
+  background-color: $white
+
+.scrollable
+  overflow-y: scroll
+  height: 100%
+  scrollbar-width: none
+
+  &::-webkit-scrollbar
+    width: 0
+
+  &::before, &::after
+    display: block
+    visibility: hidden
+    position: absolute
+    left: 0
+    right: 0
+    content: ''
+    height: 60px
+    transition: visibility 0s .3s, background-position .3s
+
+  &::before
+    top: 0
+    background-image: linear-gradient(to top, $transparentWhite, $white)
+    background-position-y: -60px
+    background-repeat: no-repeat
+
+  &::after
+    bottom: 0
+    background-image: linear-gradient(to bottom, $transparentWhite, $white)
+    background-position-y: 60px
+    background-repeat: no-repeat
+
+  &-up::before, &-down::after
+    visibility: visible
+    background-position-y: 0
+    transition: background-position .3s
+
+img
+  width: 100%

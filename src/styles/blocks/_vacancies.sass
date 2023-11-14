@@ -1,0 +1,20 @@
+.vacancies
+  .block
+    display: none
+    border: 2px solid $borderGrey
+    height: calc(100% - #{$outerOffset})
+
+    +small
+      height: calc(100% - #{$smallOuterOffset})
+
+    +medium
+      height: calc(100% - #{$mediumOuterOffset})
+
+    +large
+      height: calc(100% - #{$largeOuterOffset})
+
+    h3
+      margin-bottom: 0
+
+    & > *:last-child
+      margin-bottom: 0

@@ -1,0 +1,45 @@
+.columns
+  display: flex
+  flex-wrap: wrap
+  // margin: 0 -#{$outerOffset / 2}
+  margin: 0 -#{$outerOffset}
+  padding: 0 #{$outerOffset / 2}
+
+  +small
+    // margin: 0 -#{$smallOuterOffset / 2}
+    margin: 0 -#{$smallOuterOffset}
+    padding: 0 #{$smallOuterOffset / 2}
+
+  +medium
+    margin: 0 -#{$mediumOuterOffset / 2}
+    padding: 0
+
+  +large
+    margin: 0 -#{$largeOuterOffset / 2}
+
+  +col-all
+    padding: 0 $outerOffset / 2
+    width: 100%
+
+  +col
+
+  +small
+    +col-all
+      padding: 0 $smallOuterOffset / 2
+
+    +col-sm
+
+  +medium
+    +col-all
+      padding: 0 $mediumOuterOffset / 2
+
+    +col-md
+
+  +large
+    +col-all
+      padding: 0 $largeOuterOffset / 2
+
+    +col-lg
+
+  +extra-large
+    +col-xl

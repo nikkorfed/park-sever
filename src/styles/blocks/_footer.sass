@@ -1,0 +1,39 @@
+footer
+  color: $white
+  background-color: $backgroundGrey
+
+  .logo
+    font-weight: bold
+
+  .menu
+    display: flex
+    flex-direction: column
+    +inner-offset(margin-bottom)
+
+    a
+      padding: 5px 0
+      font-weight: bold
+      cursor: pointer
+      transition: color .3s
+
+      &:hover
+        color: $primaryColor
+    
+  .contact
+    display: block
+    +inner-offset(margin-bottom)
+
+    &:last-child
+      +outer-offset(margin-bottom)
+
+    .label
+      color: $lightGrey
+
+.copyrights
+  background-color: $backgroundBlack
+
+  .wrapper
+    +inner-offset(padding-top, padding-bottom)
+
+  p
+    margin-bottom: 0

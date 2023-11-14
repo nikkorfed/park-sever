@@ -1,0 +1,39 @@
+.technology
+  counter-reset: number
+
+  +medium
+    background-image: linear-gradient(105deg, $backgroundWhite 70%, change-color($backgroundWhite, $alpha: 0) 70%), url('/images/technology/spray-booth.jpg')
+    background-position: 100% 50%
+    background-repeat: no-repeat
+    background-size: cover, auto 100%
+
+  .wrapper > img
+    +custom-outer-offset(-7, margin-bottom)
+    border-radius: $borderRadius
+
+    +medium
+      display: none
+
+  .image
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: $borderRadius
+    +outer-offset(padding-left, padding-right)
+    width: 100%
+    background-color: $backgroundLightGrey
+
+    +medium
+      padding: 0
+      background: none
+    
+    img
+      border-radius: $borderRadius
+      width: 100%
+      max-width: 350px
+
+      +medium
+        max-width: 400px
+
+  .button-simple
+    +outer-offset(margin-bottom)

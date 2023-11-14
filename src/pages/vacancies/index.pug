@@ -1,0 +1,11 @@
+extends /layout
+
+append variables
+  - var category = 'Раздел'
+  - var title = 'Вакансии'
+  //- - var subtitle = 'Информация об открытых и доступных вакансиях на предприятии «Завод горного машиностроения» в городе Карпинск.';
+  - var path = {};
+
+block body
+  include /main
+  include /vacancies

@@ -1,0 +1,32 @@
+.about
+  text-align: center
+  color: $white
+  background-image: linear-gradient(to right, change-color($black, $alpha: .5) 50%, change-color($black, $alpha: .5)), url('/images/about.jpg')
+  background-position: 50% 50%
+  background-size: 100%, cover
+
+  .wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding-top: 120px
+    padding-bottom: 120px
+
+  .columns
+    align-items: center
+
+  h2
+    display: flex
+    flex-direction: column
+    align-items: center
+    color: $white
+
+  .subtitle
+    font-size: $sliderSubtitleSize
+
+    +small
+      font-size: $smallSliderSubtitleSize
+
+    +medium
+      font-size: $mediumSliderSubtitleSize

@@ -1,0 +1,30 @@
+section.reservation
+  .wrapper
+    .centered
+      display: flex
+      flex-direction: column
+      justify-content: center
+      height: 100%
+      max-width: 600px
+
+    form
+      display: flex
+      flex-direction: column
+      align-items: center
+      border: 2px solid $borderGrey
+      border-radius: $borderRadius
+      +outer-offset(padding)
+
+      .dates
+        display: flex
+
+      .check-in
+        +inner-offset(margin-right)
+
+      label
+        display: inline-block
+        margin-bottom: 5px
+        width: 100%
+
+      input
+        +inner-offset(margin-bottom)

@@ -1,0 +1,36 @@
+.tabs
+  display: flex
+  +outer-offset(margin-bottom)
+  border: 1px solid $backgroundGrey
+  border-radius: 2px
+  font-size: 13px
+
+[tab]
+  font-weight: 600
+  color: $lightGrey
+  background-color: $backgroundGrey
+  cursor: pointer
+  transition: color .3s, background-color .3s
+
+  &:hover
+    color: $black
+  
+  &[active]
+    color: $primaryColor
+    background-color: $white
+
+.tabs.two
+  [tab]
+    border-right: 1px solid $backgroundGrey
+    padding: 5px 0
+    width: 50%
+    text-align: center
+
+    &:last-child
+      border: none
+
+[tab-item]
+  display: none
+
+  &[active]
+    display: block

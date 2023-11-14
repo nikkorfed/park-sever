@@ -1,0 +1,21 @@
+section.reservation#reservation
+  .wrapper
+    .columns
+      .col-lg-6
+        .centered
+          .overtitle Попасть к нам
+          h2 Бронирование номеров
+          .subtitle Выберите подходящие даты заезда, отъезда и количество взрослых гостей, чтобы оставить заявку. Наш менеджеры свяжутся с вами, чтобы потдвердить бронь и уточнить необходимые детали.
+      .col-lg-6
+        form.slideIn#reservation-form
+          .columns
+            .col-6.col-md-4.col-lg-6
+              label(for='check-in') Дата заезда
+              input(type='date' name='check-in')
+            .col-6.col-md-4.col-lg-6
+              label(for='check-in') Дата выезда
+              input(type='date' name='check-out')
+            .col-12.col-md-4.col-lg-12
+              label(for='guests') Количество гостей (взрослых)
+              input(type='number' name='guests' placeholder='2 человека')
+          a.button(href='') Оставить заявку

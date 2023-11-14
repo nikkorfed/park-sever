@@ -1,0 +1,46 @@
+section.accommodation
+  background-color: $backgroundLightGrey
+
+  .block
+    display: flex
+    padding: 0
+    transition: box-shadow .3s
+
+    .image
+      display: flex
+      overflow: hidden
+      border-radius: $borderRadius
+      height: 100%
+      // width: 5/12 * 100%
+
+      img
+        transition: transform .3s
+        object-fit: cover
+
+    .content
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: flex-start
+      height: 100%
+      +outer-offset(padding)
+      // width: 7/12 * 100%
+
+      +medium
+        padding-left: 0
+
+    .buttons
+      display: flex
+
+    .price
+      +inner-offset(margin-left)
+      font-weight: bold
+      color: $black
+
+    &:hover
+      box-shadow: 0 5px 20px 0 rgba(0,0,0,.15)
+
+      img
+        transform: scale(1.05)
+
+  

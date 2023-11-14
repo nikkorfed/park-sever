@@ -1,0 +1,29 @@
+header
+  .wrapper
+    .header-line
+      .text #[b Телефон:] +7 964 582-71-77 
+      .text #[b Email:] riverdale@inbox.ru
+      .text #[b Адрес:] Московская область, р-н Дмитровский, пос. Якотское, д. Василёво
+    .header-main
+      a.menu-button
+        span
+        span
+        span
+      a.logo(href='/') 
+        img(src='/images/logo.png')
+        .text
+          .name Север Парк
+          .label Эко-отель
+      .menu
+        a(href="/") Главная
+        a(href="/living") Проживание
+        a(href="/rest") Отдых
+        a(href="/about") О нас
+        a(href="/contacts") Контакты
+      a.button(onClick="document.getElementById('reservation').scrollIntoView({ behavior: 'smooth', block: 'center' });") Забронировать
+  .mobile-menu
+    a(href="/") Главная
+    a(href="/living") Проживание
+    a(href="/rest") Отдых
+    a(href="/about") О нас
+    a(href="/contacts") Контакты

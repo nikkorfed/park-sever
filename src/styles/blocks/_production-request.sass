@@ -1,0 +1,72 @@
+section.production-request
+  position: relative
+
+  .wrapper, h2
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+
+  form
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  input, select, textarea
+    +inner-offset(margin-bottom)
+
+  .buttons
+    display: flex
+    align-items: center
+    +outer-offset(margin-bottom)
+
+  .agreement
+    display: flex
+    text-align: left
+    +inner-offset(margin-bottom)
+
+    input[type="checkbox"]
+      margin-top: 2px
+      +inner-offset(margin-right)
+
+  .button
+    +outer-offset(margin-bottom)
+
+  .loading-container
+    display: flex
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: $transparentWhite
+
+    &.hidden
+      display: none
+
+    .loading-icon
+      margin: auto
+
+  .loading-area, .success-area, .error-area
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    visibility: hidden
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    +outer-offset(padding)
+    text-align: center
+    opacity: 0
+    background-color: $transparentWhite
+    transition: opacity .3s
+
+    &.active
+      visibility: visible
+      opacity: 1
+
+    .loading-icon
+      margin: auto

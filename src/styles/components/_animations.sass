@@ -1,0 +1,31 @@
+@keyframes rotate
+  from
+    transform: rotate(0)
+  to
+    transform: rotate(360deg)
+
+.fadeIn
+  opacity: 0
+
+.fading
+  opacity: 1
+  transform: none
+  transition: opacity 1s
+
+.slideIn:not(.each)
+  opacity: 0
+  transform: translateY(15px)
+
+.sliding:not(.each)
+  opacity: 1
+  transform: none
+  transition: opacity .5s, transform .5s
+
+.slideIn.each > *
+  opacity: 0
+  transform: translateY(15px)
+
+.sliding.each > *
+  opacity: 1
+  transform: none
+  transition: opacity .5s, transform .5s

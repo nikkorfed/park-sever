@@ -1,0 +1,22 @@
+.faq
+  background-color: $backgroundWhite
+
+  .content
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  .spoiler
+    +inner-offset(margin-bottom)
+    font-weight: bold
+    text-decoration: underline
+    text-decoration-color: transparentize($backgroundBlack, .7)
+    text-underline-offset: 5px
+    color: $black
+
+    &.last
+      &.closed
+        +outer-offset(margin-bottom)
+
+      & + .answer p:last-child
+        +outer-offset(margin-bottom)

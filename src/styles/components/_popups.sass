@@ -1,0 +1,30 @@
+.popup
+  // border-radius: $borderRadius
+  +outer-offset(padding)
+  max-width: 700px
+  background-color: $white
+  transform: translateY(10px)
+  transition: transform .3s
+
+  h2
+    +inner-offset(margin-bottom)
+
+  .label
+    +inner-offset(margin-bottom)
+    color: $lightGrey
+
+  img
+    +inner-offset(margin-bottom)
+    border-radius: $borderRadius
+
+  ul
+    +inner-offset(margin-bottom)
+
+  p:last-of-type
+    margin-bottom: 0
+
+.fancybox-slide
+  padding: 0
+
+.fancybox-slide--current .popup
+  transform: none

@@ -1,0 +1,164 @@
+header
+  position: absolute
+  width: 100%
+  color: $white
+
+  +medium
+    zoom: 85%
+
+  +large
+    zoom: 100%
+
+  .wrapper
+    padding-top: 0
+    padding-bottom: 0
+    transition: background-color .3s
+
+    &::before, &::after
+      display: none
+
+  .header-line
+    display: none
+    justify-content: space-between
+    align-items: center
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15)
+    height: 36px
+    font-size: 14px
+
+    +large
+      display: flex
+
+  .header-main
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    height: 60px
+    font-size: 12px
+
+    +medium
+      justify-content: space-between
+      height: 70px
+      font-size: 14px
+      text-align: left
+
+    .menu-button
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      margin-left: -10px
+      padding: 11px
+      height: 40px
+      width: 40px
+      cursor: pointer
+
+      span
+        border-radius: 1px
+        height: 2.5px
+        width: 100%
+        background-color: white
+        transition: width .3s, transform .3s, opacity .3s
+
+      +medium
+        display: none
+
+    .logo
+      display: flex
+      align-items: center
+      transition: color .3s
+
+      img
+        margin-right: 6px
+        height: 30px
+        width: 30px
+        object-fit: contain
+
+        +medium
+          margin-right: 10px
+          height: 40px
+          width: 40px
+
+      .text
+        text-transform: uppercase
+
+        .name
+          font-weight: 900
+          line-height: 1
+
+        .label
+          font-size: 10px
+          font-weight: bold
+          // line-height: 1
+
+    .menu
+      display: none
+      flex-direction: row
+
+      +medium
+        display: flex
+
+      a
+        display: flex
+        align-items: center
+        +outer-offset(padding-right)
+        height: 100%
+        font-size: 12px
+        font-weight: bold
+        text-transform: uppercase
+        transition: color .3s
+
+        &:hover
+          // color: $primaryColor
+
+    .button
+      // display: none
+      margin-left: auto
+
+      +medium
+        display: block
+        margin-left: unset
+
+  .mobile-menu
+    visibility: hidden
+    position: fixed
+    top: 60px
+    bottom: 0
+    border-top: 1px solid #dedede
+    width: 100%
+    background-color: white
+    opacity: 0
+    transition: visibility 0s .3s, opacity .3s
+
+    a
+      display: block
+      border-bottom: 1px solid #dedede
+      padding: 20px
+      font-weight: bold
+      text-transform: uppercase
+      color: $black
+
+  &.mobile-menu-open
+    .wrapper
+      background-color: white
+
+      .menu-button span
+        background-color: $black
+
+        &:nth-child(1)
+          width: 110%
+          transform: rotate(45deg) translateX(4px) translateY(6px)
+
+        &:nth-child(2)
+          transform: scale(0.8)
+          opacity: 0
+
+        &:nth-child(3)
+          width: 110%
+          transform: rotate(-45deg) translateX(5px) translateY(-7px)
+
+      .logo
+        color: $black
+
+    .mobile-menu
+      visibility: visible
+      opacity: 1
+      transition: opacity .3s

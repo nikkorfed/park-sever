@@ -1,0 +1,55 @@
+.slider
+  padding-top: 60px
+  min-height: 600px
+  height: 100vh
+  color: white
+  background-image: linear-gradient(to bottom, transparentize($backgroundBlack, .5), transparentize($backgroundBlack, .5)), url('/images/main.jpg')
+  background-position: 50% 50%
+  background-size: 150% 100%, cover
+
+  +medium
+    padding-top: 70px
+    min-height: 700px
+
+  +large
+    padding-top: 106px
+
+  .wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  h1, .subtitle
+    max-width: $maxTextWidth
+    text-align: center
+    color: $white
+
+  .subtitle
+    font-size: $sliderSubtitleSize
+
+    +small
+      font-size: $smallSliderSubtitleSize
+
+    +medium
+      font-size: $mediumSliderSubtitleSize
+
+  ul
+    li::before
+      background-color: $primaryColor
+
+      +small
+        top: 12px
+
+      +medium
+        top: 15px
+  
+  .buttons
+    display: flex
+    flex-wrap: wrap
+
+    > *
+      +inner-offset(margin-bottom)
+
+      &:not(:last-child)
+        +outer-offset(margin-right)
