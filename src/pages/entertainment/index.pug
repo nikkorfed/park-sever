@@ -1,0 +1,13 @@
+extends /layout
+
+append variables
+  - var category = 'Услуги'
+  - var title = 'Развлечения'
+  - var subtitle = 'Катание на багги, мотоцикле, снегоходе, велосипедах, ретроавтомобиле ГАЗ М-72, рыбалка и пешие прогулки.'
+  - var path = {};
+
+block body
+  include /main
+  include /services
+  include /about
+  include /contact

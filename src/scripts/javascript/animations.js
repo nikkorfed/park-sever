@@ -7,7 +7,7 @@ function check() {
   $(".fadeIn").each(function () {
     if ($(this).hasClass("fading") || !$(this).hasClass("fadeIn")) return;
 
-    if (currentScroll > $(this).offset().top + 300) {
+    if (currentScroll > $(this).offset().top + 200) {
       $(this).addClass("fading");
       setTimeout(() => $(this).removeClass("fadeIn fading"), 1000);
     }
@@ -22,7 +22,7 @@ function check() {
     }
 
     let delay = 0;
-    if (currentScroll > $(this).offset().top + 300) {
+    if (currentScroll > $(this).offset().top + 200) {
       if (!$(this).hasClass("each")) return animate(this);
 
       $(this).removeClass("slideIn each");

@@ -1,5 +1,12 @@
 .main
-  background-color: $backgroundLightGrey
+  padding-top: 60px
+  background-image: linear-gradient(to bottom, $transparentBlack, $transparentBlack), url('/images/main.jpg')
+  background-position: 50% 50%
+  background-repeat: no-repeat
+  background-size: cover
+
+  +medium
+    padding-top: 70px
 
   .path
     display: flex
@@ -7,7 +14,7 @@
     +outer-offset(margin-bottom)
     font-size: 14px
     font-weight: bold
-    color: $black
+    color: $white
 
     a
       transition: color .3s
@@ -19,8 +26,15 @@
       margin: 0 5px
       height: 20px
       width: 20px
-      background: url('/images/icons/arrow-right.svg') 50% 50% no-repeat
+      background: url(/images/icons/arrow-right-white.svg) 50% 50% no-repeat
       background-size: 8px
 
     & > *:last-child
       color: $lightGrey
+
+  h1
+    color: $white
+
+  .subtitle
+    margin-bottom: 0
+    color: $white
