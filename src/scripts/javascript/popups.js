@@ -1,1 +1,1 @@
-$("[data-fancybox]").fancybox({ touch: false });
+$("[data-fancybox]").fancybox({ touch: false, buttons: ["close"] });

@@ -1,0 +1,29 @@
+section.house
+  .columns
+    display: flex
+    flex-direction: column-reverse
+
+    +medium
+      flex-direction: row
+
+  b
+    color: $black
+
+  img
+    position: sticky
+    +outer-offset(top)
+    +inner-offset(margin-bottom)
+    border-radius: $borderRadius
+
+  .prices
+    display: flex
+    +inner-offset(margin-bottom)
+
+  .price
+    +inner-offset(margin-right)
+
+    .label
+
+    .value
+      font-weight: bold
+      color: $black

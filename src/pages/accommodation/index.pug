@@ -1,0 +1,15 @@
+extends /layout
+
+append variables
+  - var category = 'Услуги'
+  - var title = 'Проживание'
+  - var subtitle = 'Стеклянный гостевой домик вдали от городской суеты и забот. Оборудован современной мебелью, удобной кухней и может контролироваться со смартфона.'
+  - var path = {};
+
+block body
+  include /main
+  include /house
+  include /photos
+  include /entertainment
+  include /about
+  include /contact

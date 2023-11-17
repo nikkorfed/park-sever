@@ -1,34 +1,24 @@
-.photos
+section.photos
   background-color: $backgroundLightGrey
 
-  .photos-container
-    display: flex
-    flex-wrap: wrap
-    margin: 0 -2.5px
-    +inner-offset(margin-bottom)
+  .columns
+    margin: 0
+
+    & > div
+      padding: 0
 
   .photo
+    display: block
     overflow: hidden
-    border: 2.5px solid $white
-    width: 1/6 * 100%
-
-    +medium
-      width: 1/8 * 100%
-
-    +large
-      width: 1/8 * 100%
+    position: relative
+    border: 1px solid $backgroundLightGrey
+    padding-bottom: 100%
 
   img
-    margin-bottom: -7px
+    position: absolute
+    height: 100%
+    object-fit: cover
     transition: transform .3s
 
     &:hover
       transform: scale(1.1)
-
-  .text
-    display: none
-
-  .button-area
-    display: flex
-    justify-content: center
-    +outer-offset(margin-bottom)
