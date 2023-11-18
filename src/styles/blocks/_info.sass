@@ -5,5 +5,27 @@
     width: 100%
 
   .block
-    & > *:last-child
+    border-radius: $borderRadius
+
+    .columns > *:last-child > .contact
       margin-bottom: 0
+
+    .contact
+      display: block
+      +inner-offset(margin-bottom)
+
+      +medium
+        margin-bottom: 0
+
+      .label
+        color: $almostWhite
+
+      .text
+        color: $black
+
+    a.contact
+      .text
+        transition: color .3s
+
+      &:hover .text
+        color: $primaryColor
