@@ -42,11 +42,40 @@ section.animals
     &:hover
       transform: scale(1.05)
 
+  .caption
+    position: absolute
+    bottom: 0
+    width: 100%
+    padding: 15px
+    font-weight: bold
+    color: white
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent)
+
 #about-animals
   display: none
   border-radius: $borderRadius
   +outer-offset(padding)
+  padding-bottom: 0 !important
   max-width: $maxTextWidth
 
+  .block
+    overflow: hidden
+    position: relative
+    padding: 0
+    height: 300px
+    width: 100%
+
   img
-    border-radius: $borderRadius
+    position: absolute
+    height: 100%
+    width: 100%
+    object-fit: cover
+
+  .caption
+    position: absolute
+    width: 100%
+    bottom: 0
+    padding: 20px
+    font-weight: bold
+    color: white
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent)
