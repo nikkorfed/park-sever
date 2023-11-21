@@ -1,25 +1,23 @@
 section.contact
-  form
+  .max-width
+    margin: auto
+    text-align: center
+
+  h2
     display: flex
     flex-direction: column
     align-items: center
 
-    +small
-      flex-direction: row
-      align-items: stretch
-
-    input
-      +inner-offset(margin-bottom)
-
-      +small
-        +inner-offset(margin-right)
-        margin-bottom: 0
-        width: unset
-
-    .button
-      display: flex
-      justify-content: center
-      align-items: center
+  .buttons
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    +inner-offset(margin-bottom, gap)
+    
+  .phone
+    line-height: 1
+    font-weight: bold
+    color: $black
 
   & + .info
     background-color: $backgroundLightGrey

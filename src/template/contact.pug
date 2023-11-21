@@ -2,12 +2,14 @@ section.contact#contact
   .wrapper
     .max-width.slideIn.each
       .overtitle Связаться с нами
-      h2 Ответим на ваши вопросы
-      .subtitle Оставьте свой номер телефона и мы свяжемся с вами. Мы ответим на ваши вопросы и поможем забронировать домик на нужные даты.
-    form#contact-me-form.slideIn.each
-      input(type='text' name="name" placeholder="Имя")
-      input(type='text' name="phone" placeholder="Телефон")
-      a.button(href="") Отправить
+      h2 Забронировать дом
+      .subtitle Свяжитесь с нами любым удобным способом (по телефону или через WhatsApp), чтобы мы ответили на ваши вопросы и помогли забронировать домик на нужные даты. Также вы можете самостоятельно оформить бронь через систему бронирования.
+      .buttons
+        a.button(href="https://booking-online.agast.ru/?hms_system_id=17391") Забронировать
+        a.button-whatsapp(href='https://wa.me/79258710937') Написать в WhatsApp
+      a.phone-button(href='tel:+79258710937')
+        .label Позвонить по телефону:
+        .phone +7 925 871-09-37
 section.info
   .wrapper.slideIn.each
     .overtitle Где мы находимся
