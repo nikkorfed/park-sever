@@ -1,29 +1,24 @@
 .advantages
-  background-color: $backgroundWhite
+  background-color: $backgroundLightGrey
+
+  .max-width
+    margin: auto
+    text-align: center
+
+  h2
+    display: flex
+    flex-direction: column
+    align-items: center
 
   .advantage
-    position: relative
+    display: flex
+    align-items: flex-start
     +outer-offset(margin-bottom)
-    +custom-outer-offset(30, padding-left)
 
-    &::before
-      display: flex
-      justify-content: center
-      align-items: center
-      position: absolute
-      left: 0
-      border-radius: 100%
-      height: 30px
-      width: 30px
-      font-weight: bold
-      counter-increment: number
-      content: counter(number)
-      color: $white
-      background-color: $primaryColor
-
-      // +medium
-        height: 40px
-        width: 40px
+    img
+      +outer-offset(margin-right)
+      height: 80px
+      width: 80px
 
     p
       margin-bottom: 0
