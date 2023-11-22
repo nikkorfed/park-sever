@@ -1,0 +1,13 @@
+extends /layout
+
+append variables
+  - var category = 'Раздел'
+  - var title = 'О нас'
+  - var subtitle = 'Узнайте подробную информацию про обширную территорию парка и животных, которых можно встретить на прогулке в лесу.'
+  - var path = {};
+
+block body
+  include /main
+  include /animals
+  include /about
+  include /contact

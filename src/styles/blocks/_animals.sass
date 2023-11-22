@@ -6,14 +6,8 @@ section.animals
     flex-direction: column
     align-items: center
     margin: auto
+    text-align: center
 
-  .columns
-    margin: 0
-    padding: 0
-  
-    & > *
-      padding: 0
-    
   h2
     display: flex
     flex-direction: column
@@ -23,40 +17,8 @@ section.animals
     +inner-offset(margin-bottom)
     text-align: center
 
-  .button-simple
+  p:last-child
     +outer-offset(margin-bottom)
-
-  .photo
-    display: block
-    overflow: hidden
-    position: relative
-    border: 1px solid $backgroundLightGrey
-    padding-bottom: 100%
-
-  img
-    position: absolute
-    height: 100%
-    object-fit: cover
-    transition: transform .3s
-
-    &:hover
-      transform: scale(1.05)
-
-  .caption
-    position: absolute
-    bottom: 0
-    width: 100%
-    padding: 15px
-    font-weight: bold
-    color: white
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent)
-
-#about-animals
-  display: none
-  border-radius: $borderRadius
-  +outer-offset(padding)
-  padding-bottom: 0 !important
-  max-width: $maxTextWidth
 
   .block
     overflow: hidden
