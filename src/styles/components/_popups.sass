@@ -18,11 +18,28 @@
     +inner-offset(margin-bottom)
     border-radius: $borderRadius
 
+  .photo
+    display: block
+    overflow: hidden
+    position: relative
+    +outer-offset(margin-bottom)
+    border-radius: $borderRadius
+    padding-bottom: 100%
+    cursor: pointer
+    
+    img
+      position: absolute
+      margin-bottom: 0
+      border-radius: 0
+      height: 100%
+      object-fit: cover
+      transition: transform .3s
+
+    &:hover img
+      transform: scale(1.05)
+
   ul
     +inner-offset(margin-bottom)
-
-  p:last-of-type
-    margin-bottom: 0
 
 .fancybox-slide
   padding: 0
