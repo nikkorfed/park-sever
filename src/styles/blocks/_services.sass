@@ -1,24 +1,11 @@
 section.services
   .block
+    display: block
     overflow: hidden
     position: relative
     padding: 0
     height: 300px
     width: 100%
-
-    .icon
-      position: absolute
-      +outer-offset(top, left)
-      border-radius: $borderRadius
-      padding: 10px
-      font-weight: bold
-      color: $white
-      background-color: $primaryColor
-
-      img
-        height: 40px
-        width: 40px
-        margin-bottom: -7px
 
     .image
       height: 100%
@@ -47,6 +34,11 @@ section.services
         color: $black
         background-color: $transparentWhite
 
+      .row
+        display: flex
+        justify-content: space-between
+        align-items: center
+
       h3
         margin-bottom: 0
         color: $white
@@ -56,6 +48,9 @@ section.services
         margin-bottom: 0
         height: 0
         opacity: 0
+
+      .button-arrow
+        +inner-offset(margin-top)
 
     &:hover
       .image
@@ -69,3 +64,6 @@ section.services
           height: unset
           opacity: 1
           transition: opacity .3s
+
+  a.block
+    cursor: pointer
