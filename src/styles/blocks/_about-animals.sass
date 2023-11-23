@@ -1,0 +1,43 @@
+section.about-animals
+  // background-color: $backgroundLightGrey
+
+  .max-width
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: auto
+
+  .columns
+    margin: 0
+    padding: 0
+  
+    & > *
+      padding: 0
+    
+  h2
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  .subtitle
+    +inner-offset(margin-bottom)
+    text-align: center
+
+  .button-simple
+    +outer-offset(margin-bottom)
+
+  .photo
+    display: block
+    overflow: hidden
+    position: relative
+    border: 1px solid $backgroundLightGrey
+    padding-bottom: 100%
+
+  img
+    position: absolute
+    height: 100%
+    object-fit: cover
+    transition: transform .3s
+
+    &:hover
+      transform: scale(1.05)
