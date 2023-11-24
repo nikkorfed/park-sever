@@ -1,7 +1,6 @@
 .slider
   padding-top: 60px
-  min-height: 600px
-  height: 100vh
+  height: 400px
   color: white
   background-image: linear-gradient(to bottom, transparentize($backgroundBlack, .5), transparentize($backgroundBlack, .5)), url('/images/accommodation/27.jpeg')
   background-position: 50% 50%
@@ -9,10 +8,10 @@
 
   +medium
     padding-top: 70px
-    min-height: 700px
+    height: 600px
 
-  // +large
-    padding-top: 106px
+  +large
+    height: 800px
 
   .wrapper
     display: flex
@@ -20,13 +19,28 @@
     justify-content: center
     align-items: center
 
-  h1, .subtitle
+  h1
     max-width: $maxTextWidth
+    font-family: 'Caveat'
+    font-size: 30px
+    line-height: 1.2
     text-align: center
     color: $white
 
+    +small
+      font-size: 34px
+
+    +medium
+      font-size: 40px
+
+    +large
+      font-size: 60px
+
   .subtitle
+    max-width: $maxTextWidth
     font-size: $sliderSubtitleSize
+    text-align: center
+    color: $white
 
     +small
       font-size: $smallSliderSubtitleSize
