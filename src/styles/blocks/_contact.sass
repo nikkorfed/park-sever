@@ -1,4 +1,8 @@
 section.contact
+  // border: 2px solid $borderGrey
+  border-radius: $borderRadius
+  background: $backgroundLightGrey
+
   .max-width
     margin: auto
     text-align: center
@@ -20,4 +24,11 @@ section.contact
     color: $black
 
   & + .info
-    background-color: $backgroundLightGrey
+    .max-width
+      margin: auto
+      text-align: center
+      // background-color: $backgroundLightGrey
+
+    iframe
+      overflow: hidden
+      border-radius: $borderRadius
