@@ -1,40 +1,68 @@
 .slider
-  padding-top: 60px
+  position: relative
   height: 400px
   color: white
-  background-image: linear-gradient(to bottom, transparentize($backgroundBlack, .5), transparentize($backgroundBlack, .5)), url('/images/accommodation/27.jpeg')
+  background-image: linear-gradient(to bottom, transparentize($backgroundBlack, .5), transparentize($backgroundBlack, .5))
   background-position: 50% 50%
   background-size: 150% 100%, cover
 
   +medium
-    padding-top: 70px
     height: 600px
 
   +large
     height: 800px
+
+  .background
+    position: absolute
+    height: 100%
+    width: 100%
+    z-index: -1
+
+    .owl-carousel, .owl-stage-outer, .owl-stage
+      height: 100%
+      width: 100%
+
+    .owl-item
+      overflow: hidden
+
+    img
+      height: 100%
+      object-fit: cover
+      animation: zoomIn 5s infinite ease-in-out alternate
+
 
   .wrapper
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
+    padding-top: calc(60px + #{$outerOffset})
+
+    +small
+      padding-top: calc(60px + #{$smallOuterOffset})
+
+    +medium
+      padding-top: calc(70px + #{$mediumOuterOffset})
+
+    +large
+      padding-top: calc(70px + #{$largeOuterOffset})
 
   h1
     max-width: $maxTextWidth
-    font-family: 'Caveat'
-    font-size: 30px
-    line-height: 1.2
+    // font-family: 'Caveat'
+    // font-size: 34px
+    line-height: 1.5
     text-align: center
     color: $white
 
     +small
-      font-size: 34px
+      // font-size: 40px
 
     +medium
-      font-size: 40px
+      // font-size: 50px
 
     +large
-      font-size: 60px
+      // font-size: 60px
 
   .subtitle
     max-width: $maxTextWidth
@@ -67,3 +95,13 @@
 
       &:not(:last-child)
         +outer-offset(margin-right)
+  
+  .leitmotif
+    position: absolute
+    +outer-offset(right, bottom)
+    font-family: 'Caveat'
+    font-size: 16px
+    animation: pulse 3s infinite
+
+    +medium
+      font-size: 24px
