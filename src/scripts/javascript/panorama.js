@@ -2,6 +2,7 @@ pannellum.viewer("panorama", {
   type: "equirectangular",
   panorama: "https://pannellum.org/images/alma.jpg",
   autoLoad: true,
+  mouseZoom: false,
   showControls: false,
   // hotSpotDebug: true,
   hotSpots: [

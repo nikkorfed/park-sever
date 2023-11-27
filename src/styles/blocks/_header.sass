@@ -1,8 +1,5 @@
 header
-  position: absolute
-  z-index: 10
-  width: 100%
-  color: $white
+  color: $black
 
   +medium
     zoom: 85%
@@ -33,13 +30,11 @@ header
     display: flex
     justify-content: flex-start
     align-items: center
-    height: 60px
-    // font-size: 12px
+    height: 50px
 
     +medium
       justify-content: space-between
-      height: 70px
-      // font-size: 14px
+      height: 60px
       text-align: left
 
     .menu-button
@@ -56,7 +51,7 @@ header
         border-radius: 1px
         height: 2.5px
         width: 100%
-        background-color: white
+        background-color: $black
         transition: width .3s, transform .3s, opacity .3s
 
       +medium
@@ -104,7 +99,7 @@ header
         align-items: center
         +outer-offset(padding-right)
         height: 100%
-        font-size: 12px
+        font-size: 14px
         font-weight: bold
         text-transform: uppercase
         transition: color .3s
@@ -123,8 +118,9 @@ header
   .mobile-menu
     visibility: hidden
     position: fixed
-    top: 60px
+    top: 50px
     bottom: 0
+    z-index: 100
     // border-top: 1px solid #dedede
     width: 100%
     background-color: white
