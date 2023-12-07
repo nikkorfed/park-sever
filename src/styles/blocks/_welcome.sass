@@ -18,7 +18,7 @@ section.welcome
 
   .slides
     position: relative
-    height: 600px
+    height: 500px
 
     & > div
       position: absolute
@@ -38,9 +38,6 @@ section.welcome
       &:nth-child(4)
         animation: fadeIn 40s ease-in-out 30s infinite
 
-  .columns
-    min-height: 400px
-
   .centered
     display: flex
     flex-direction: column
@@ -51,16 +48,18 @@ section.welcome
     border-radius: $borderRadius
     object-fit: cover
 
+  .image-1
+    max-height: 500px
+
   .quote
     .text
       font-size: 40px
       color: $black
 
-    .author
-      text-align: right
+  .text-2
+    margin: auto
+    max-width: 600px
+    text-align: center
 
-  .text-1, .text-2, .text-3
-    font-size: 24px
-
-  .image-2, .image-3
-    height: 100%
+  .image-2
+    max-height: 300px
