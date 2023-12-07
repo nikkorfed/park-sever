@@ -1,0 +1,66 @@
+section.welcome
+  .block
+    margin: auto
+    max-width: 1200px
+    background-color: $backgroundLightGrey
+
+  h2
+    margin-left: auto
+    margin-right: auto
+    font-size: 20px
+    text-align: center
+
+    +small
+      font-size: 24px
+
+    +medium
+      font-size: 30px
+
+  .slides
+    position: relative
+    height: 600px
+
+    & > div
+      position: absolute
+      height: 100%
+      width: 100%
+      opacity: 0
+
+      &:first-child
+        animation: fadeIn 40s ease-in-out infinite
+
+      &:nth-child(2)
+        animation: fadeIn 40s ease-in-out 10s infinite
+
+      &:nth-child(3)
+        animation: fadeIn 40s ease-in-out 20s infinite
+
+      &:nth-child(4)
+        animation: fadeIn 40s ease-in-out 30s infinite
+
+  .columns
+    min-height: 400px
+
+  .centered
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: 100%
+
+  img
+    border-radius: $borderRadius
+    object-fit: cover
+
+  .quote
+    .text
+      font-size: 40px
+      color: $black
+
+    .author
+      text-align: right
+
+  .text-1, .text-2, .text-3
+    font-size: 24px
+
+  .image-2, .image-3
+    height: 100%
