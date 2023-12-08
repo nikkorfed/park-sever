@@ -1,0 +1,40 @@
+section.advantages-2
+  .max-width
+    margin: auto
+    text-align: center
+
+  .block
+    display: flex
+    height: 600px
+
+    .item
+      display: flex
+      overflow: hidden
+      flex-direction: column
+      flex: 1 1 100px
+      transition: flex 1s ease-in-out
+
+      img
+        display: block
+        height: 100%
+        object-fit: cover
+
+      .content
+        height: 0px
+        background-color: $backgroundLightGrey
+        transition: height 1s ease-in-out
+
+        .text
+          +outer-offset(padding)
+          opacity: 0
+          transition: opacity 1s ease-in-out
+
+      &:hover
+        flex-grow: 2
+
+        .content
+          height: 50%
+
+          .text
+            opacity: 1
+            transition: opacity 1s 1s ease-in-out
