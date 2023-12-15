@@ -1,10 +1,33 @@
 section.advantages-2
+  // +large
+    height: 100vh
+    min-height: 600px
+
+  .wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    &::before
+      +outer-offset(margin-bottom)
+      height: 100px
+      width: 1px
+      content: ''
+      background-color: $borderGrey
+
   .max-width
     margin: auto
     text-align: center
 
+  .subtitle .link
+    border-bottom: 1px solid $black
+    // color: $primaryColor
+
   .block
     display: flex
+    margin-bottom: 0
+    padding: 0
     height: 600px
 
     .item

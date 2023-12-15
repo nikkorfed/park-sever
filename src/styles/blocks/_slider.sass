@@ -5,7 +5,7 @@
   // border-bottom-left-radius: $borderRadius
   // border-bottom-right-radius: $borderRadius
   height: 400px
-  color: white
+  color: #fbf9f4
   background-image: linear-gradient(to bottom, transparentize($backgroundBlack, .5), transparentize($backgroundBlack, .5))
   background-position: 50% 50%
   background-size: 150% 100%, cover
@@ -32,7 +32,7 @@
     img
       height: 100%
       object-fit: cover
-      animation: zoomIn 10s infinite ease-in-out alternate
+      animation: zoomIn 15s infinite ease-in-out alternate
 
 
   .wrapper
@@ -43,11 +43,14 @@
 
   h1
     max-width: $maxTextWidth
-    // font-family: 'Caveat'
+    font-family: 'Gabriola'
     // font-size: 34px
     line-height: 1.5
     text-align: center
-    color: $white
+    color: #fbf9f4
+
+    span
+      font-family: 'Lucida Calligraphy'
 
     +small
       // font-size: 40px
@@ -60,9 +63,10 @@
 
   .subtitle
     max-width: $maxTextWidth
+    font-family: 'Gabriola'
     font-size: $sliderSubtitleSize
     text-align: center
-    color: $white
+    color: #fbf9f4
 
     +small
       font-size: $smallSliderSubtitleSize

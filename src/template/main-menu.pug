@@ -2,22 +2,21 @@ section.main-menu#main-menu
   .wrapper
     .centered.max-width
       .overtitle Услуги парка
-      h2 Что вас интересует
+      h2 Побалуйте себя и свои чувства
       .subtitle Для гостей парка доступен стеклянный гостевой домик с голосовым управлением через Алису, а также различные развлечения, спорт и активный отдых на открытом воздухе.
     .columns.slideIn.each
-      .col-md-6
-        a.block(href='/accommodation')
-          img.image(src="/images/accommodation/1.jpeg")
-          .overlay
-            h2 Проживание
-            .content
-              .subtitle Стеклянный гостевой домик вдали от городской суеты и забот. Оборудован современной мебелью, удобной кухней и может контролироваться голосом через Алису.
-              .button-arrow Подробнее
-      .col-md-6
-        a.block(href="/entertainment")
-          img.image(src="/images/services/buggy.jpg")
-          .overlay
-            h2 Развлечения
-            .content
-              .subtitle Катание на багги, мотоцикле, снегоходе, велосипедах, ретроавтомобиле ГАЗ М-72, рыбалка и пешие прогулки.
-              .button-arrow Подробнее
+      a.col-sm-6.col-md-4(href='/accommodation')
+        .image
+          img(src="/images/main-menu/1.jpeg")
+        h2 Развлечения с экстримом
+        .button-arrow Подробнее
+      a.col-sm-6.col-md-4(href="/entertainment")
+        .image
+          img(src="/images/main-menu/2.jpeg")
+        h2 Эксклюзивные дома с уникальным интерьером
+        .button-arrow Подробнее
+      a.col-sm-6.col-md-4(href="/about")
+        .image
+          img(src="/images/main-menu/3.jpeg")
+        h2 Прогулки по первозданной природе
+        .button-arrow Подробнее

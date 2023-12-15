@@ -1,6 +1,17 @@
 section.main-menu
   .wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
     padding-bottom: 0
+
+    &::before
+      +outer-offset(margin-bottom)
+      height: 100px
+      width: 1px
+      content: ''
+      background-color: $borderGrey
 
   .centered
     display: flex
@@ -14,61 +25,29 @@ section.main-menu
       flex-direction: column
       align-items: center
 
-  .block
+  .columns > a
+    +outer-offset(margin-bottom)
+    text-align: center
+
+  .image
     display: block
     overflow: hidden
-    position: relative
-    padding: 0
     height: 280px
-    width: 100%
+    +outer-offset(margin-bottom)
+    border-radius: $borderRadius
 
     +medium
       height: 400px
 
-    .image
+    img
       height: 100%
       object-fit: cover
       transition: transform .3s
 
-    .overlay
-      display: flex
-      flex-direction: column
-      justify-content: flex-end
-      align-items: flex-start
-      position: absolute
-      top: 0
-      +outer-offset(padding)
-      height: 100%
-      width: 100%
-      color: $white
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3))
-      background-color: rgba(0, 0, 0, 0)
-      transition: background-color .3s
+  .button-arrow
+    color: $black
+    background-image: url("/images/icons/arrow-right.svg")
 
-      h2
-        margin-bottom: 0
-        color: $white
-
-        &::after
-          display: none
-
-      .content
-        // visibility: hidden
-        height: 0
-        opacity: 0
-
-      .subtitle
-        +inner-offset(margin-top, margin-bottom)
-
-    &:hover
-      .image
-        transform: scale(1.05)
-
-      .overlay
-        background-color: rgba(0, 0, 0, 0.3)
-
-      .content
-        // visibility: visible
-        height: unset
-        opacity: 1
-        transition: .3s
+  .columns > a:hover
+    .image img
+      transform: scale(1.05)

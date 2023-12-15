@@ -1,4 +1,29 @@
 section.welcome
+  // border-bottom: 1px solid $borderGrey
+
+  // +large
+    height: 100vh
+    min-height: 600px
+
+  .wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    &::before
+      +outer-offset(margin-top, margin-bottom)
+      height: 100px
+      width: 1px
+      content: ''
+      background-color: $borderGrey
+
+  .centered
+    display: flex
+    flex-direction: column
+    justify-content: center
+    min-height: 100%
+
   .block
     margin: auto
     max-width: 1200px
@@ -16,50 +41,38 @@ section.welcome
     +medium
       font-size: 30px
 
-  .slides
+  .text-1, .text-2, .text-3
+    font-size: 18px
+    opacity: 0
+
+  .text-1
+    animation: fadeIn 1s ease-in-out forwards
+
+  .text-2
+    animation: fadeIn 1s ease-in-out 5s forwards
+
+  .text-3
+    animation: fadeIn 1s ease-in-out 10s forwards
+
+  .images
     position: relative
-    height: 500px
 
-    & > div
-      position: absolute
-      height: 100%
-      width: 100%
-      opacity: 0
+  .image-1, .image-2, .image-3
+    opacity: 0
 
-      &:first-child
-        animation: fadeIn 40s ease-in-out infinite
+  .image-1
+    animation: fadeInOut 5s ease-in-out both
 
-      &:nth-child(2)
-        animation: fadeIn 40s ease-in-out 10s infinite
+  .image-2
+    animation: fadeInOut 5s ease-in-out 5s both
 
-      &:nth-child(3)
-        animation: fadeIn 40s ease-in-out 20s infinite
+  .image-3
+    animation: fadeIn 1s ease-in-out 10s both
 
-      &:nth-child(4)
-        animation: fadeIn 40s ease-in-out 30s infinite
-
-  .centered
-    display: flex
-    flex-direction: column
-    justify-content: center
-    height: 100%
+  .button-arrow
+    color: $black
+    background-image: url("/images/icons/arrow-right.svg")
 
   img
     border-radius: $borderRadius
     object-fit: cover
-
-  .image-1
-    max-height: 500px
-
-  .quote
-    .text
-      font-size: 40px
-      color: $black
-
-  .text-2
-    margin: auto
-    max-width: 600px
-    text-align: center
-
-  .image-2
-    max-height: 300px

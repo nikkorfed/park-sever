@@ -4,8 +4,19 @@ section.contact
   // background-color: $backgroundLightGrey
 
   .wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
     padding-top: 0
     padding-bottom: 0
+
+    &::before
+      align-self: center
+      +outer-offset(margin-bottom)
+      height: 100px
+      width: 1px
+      content: ''
+      background-color: $borderGrey
 
   .block
     margin-bottom: 0
@@ -33,6 +44,19 @@ section.contact
     color: $black
 
   & + .info
+    .wrapper
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+
+      &::before
+        +outer-offset(margin-bottom)
+        height: 100px
+        width: 1px
+        content: ''
+        background-color: $borderGrey
+
     .max-width
       margin: auto
       text-align: center

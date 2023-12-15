@@ -3,6 +3,17 @@
   color: $white
 
   .wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    &::before
+      align-self: center
+      +outer-offset(margin-bottom)
+      height: 100px
+      width: 1px
+      content: ''
+      background-color: $borderGrey
 
   .block
     display: flex
