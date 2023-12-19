@@ -61,17 +61,21 @@ section.welcome
     opacity: 0
 
   .image-1
-    animation: fadeInOut 5s ease-in-out both
+    animation: fadeInOut 15s ease-in-out both infinite
 
   .image-2
-    animation: fadeInOut 5s ease-in-out 5s both
+    animation: fadeInOut 15s ease-in-out 5s both infinite
 
   .image-3
-    animation: fadeIn 1s ease-in-out 10s both
+    animation: fadeInOut 15s ease-in-out 10s both infinite
 
   .button-arrow
+    +outer-offset(margin-bottom)
     color: $black
     background-image: url("/images/icons/arrow-right.svg")
+
+    +large
+      margin-bottom: 0
 
   img
     border-radius: $borderRadius
