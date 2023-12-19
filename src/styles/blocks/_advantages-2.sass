@@ -25,10 +25,16 @@ section.advantages-2
     // color: $primaryColor
 
   .block
-    display: flex
+    display: none
+    overflow: hidden
     margin-bottom: 0
+    border-radius: $borderRadius
     padding: 0
     height: 600px
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.1)
+
+    +medium
+      display: flex
 
     .item
       display: flex
@@ -61,3 +67,28 @@ section.advantages-2
           .text
             opacity: 1
             transition: opacity 1s 1s ease-in-out
+
+  .block-mobile
+    display: flex
+    overflow: hidden
+    border-radius: $borderRadius
+
+    +medium
+      display: none
+
+    .item
+      position: relative
+      height: 100%
+
+    img
+      height: 100%
+      object-fit: cover
+
+    .text
+      position: absolute
+      width: 100%
+      bottom: 0
+      +outer-offset(padding)
+      padding-top: 50px
+      color: $white
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0,0,0,0))
