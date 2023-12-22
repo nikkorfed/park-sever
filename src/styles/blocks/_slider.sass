@@ -1,9 +1,7 @@
-.slider
+section.slider
   position: relative
   overflow: hidden
   border-radius: $borderRadius
-  // border-bottom-left-radius: $borderRadius
-  // border-bottom-right-radius: $borderRadius
   height: 400px
   color: #fbf9f4
   background-image: linear-gradient(to bottom, transparentize($backgroundBlack, .5), transparentize($backgroundBlack, .5))
@@ -14,7 +12,7 @@
     height: 600px
 
   +large
-    height: 100vh
+    height: calc(100vh + 60px)
 
   .background
     position: absolute
@@ -103,6 +101,7 @@
         +outer-offset(margin-right)
   
   .leitmotif
+    display: none
     position: absolute
     +outer-offset(right, bottom)
     font-family: 'Caveat'
@@ -111,3 +110,19 @@
 
     +medium
       font-size: 24px
+
+section.booking
+  overflow: hidden
+  +negative-outer-offset(margin-top)
+  +outer-offset(margin-left, margin-right)
+  border: 1px solid $borderGrey
+  border-radius: $borderRadius
+
+  +large
+    margin-top: -60px
+
+  button[type="submit"]
+    background-color: $primaryColor !important
+
+.znms-widget__widget-btn
+  display: none !important
