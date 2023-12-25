@@ -112,14 +112,35 @@ section.slider
       font-size: 24px
 
 section.booking
-  overflow: hidden
   +negative-outer-offset(margin-top)
-  +outer-offset(margin-left, margin-right)
-  border: 1px solid $borderGrey
-  border-radius: $borderRadius
+  border-bottom-left-radius: $borderRadius
+  border-bottom-right-radius: $borderRadius
+  +outer-offset(padding-left, padding-right, padding-bottom)
+  background-color: $backgroundBlack
 
   +large
     margin-top: -60px
+
+  .container
+    overflow: hidden
+    border-radius: $borderRadius
+
+  .znms-widget__module-form-block
+    padding: 0
+    background: unset
+
+    .znms-widget__module-form-block__title
+      color: $white
+
+    .znms-widget__module-form-block__item
+      border: 1px solid transparentize($borderGrey, .5)
+      background: none
+
+    .znms-widget__module-form-block__label,
+    .znms-widget__module-form-block__input,
+    .znms-widget__module-form-block__select,
+    .znms-widget__module-form-block__select span
+      color: $white
 
   button[type="submit"]
     background-color: $primaryColor !important
