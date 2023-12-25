@@ -25,8 +25,8 @@ section.welcome
     min-height: 100%
 
   .block
-    margin: auto
-    max-width: 1200px
+    margin-bottom: 0
+    border: 2px solid $borderGrey
     background-color: $backgroundLightGrey
 
   h2
@@ -56,6 +56,10 @@ section.welcome
 
   .images
     position: relative
+    min-height: 220px
+
+    +medium
+      min-height: 320px
 
   .image-1, .image-2, .image-3
     opacity: 0
