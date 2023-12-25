@@ -41,8 +41,9 @@ section.main-menu
 
     img
       height: 100%
+      filter: grayscale(50%)
       object-fit: cover
-      transition: transform .3s
+      transition: filter .3s, transform .3s
 
   .button-arrow
     color: $black
@@ -50,4 +51,26 @@ section.main-menu
 
   .columns > a:hover
     .image img
+      filter: none
       transform: scale(1.05)
+
+  .desktop
+    display: none
+
+    +large
+      display: block
+
+  .mobile
+    align-self: stretch
+    +negative-outer-offset(margin-left, margin-right)
+
+    +large
+      display: none
+
+    .owl-item
+      +outer-offset(margin-left, margin-right)
+
+    a
+      display: block
+      +outer-offset(margin-bottom)
+      text-align: center

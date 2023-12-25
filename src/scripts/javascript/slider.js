@@ -7,7 +7,7 @@ $(document).ready(function () {
     animateIn: "fadeIn",
     animateOut: "fadeOut",
   });
-  $("#advantages-2 .owl-carousel").owlCarousel({
+  $("#advantages-2 .owl-carousel, #main-menu .owl-carousel").owlCarousel({
     items: 1,
     loop: true,
     autoplay: true,
