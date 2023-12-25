@@ -6,20 +6,28 @@ section.photos
     text-align: center
 
   .columns
-    overflow: hidden
-    margin: 0
-    border-radius: $borderRadius
-    padding: 0
+    // overflow: hidden
+    // margin: 0
+    // border-radius: $borderRadius
+    // padding: 0
 
     & > div
-      padding: 0
+      // padding: 0
 
   .photo
     display: block
     overflow: hidden
     position: relative
+    +outer-offset(margin-bottom)
     border: 1px solid $backgroundLightGrey
+    border-radius: $borderRadius
     padding-bottom: 100%
+
+  .half .photo
+    padding-bottom: 47.5%
+
+    +medium
+      padding-bottom: 46%
 
   img
     position: absolute
