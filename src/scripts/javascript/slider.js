@@ -13,7 +13,12 @@ $(document).ready(function () {
     autoplay: true,
     autoplayTimeout: 5000,
   });
-  $("#advantages .owl-carousel").owlCarousel({
+  $("#advantages .mobile .owl-carousel").owlCarousel({
+    items: 3,
+    loop: true,
+    center: true,
+  });
+  $("#advantages .desktop .owl-carousel").owlCarousel({
     items: 1,
     margin: 10,
     loop: true,

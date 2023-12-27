@@ -25,84 +25,109 @@ section.advantages
     border-bottom: 1px solid transparentize($black, .7)
     // color: $primaryColor
 
-  .item
-    display: flex
-    overflow: hidden
-    border: 2px solid $borderGrey
-    border-radius: $borderRadius
-    height: 300px
-
-    +small
-      height: 400px
+  .mobile
+    display: block
+    width: 100%
 
     +medium
-      height: 500px
+      display: none
 
-    img
-      object-fit: cover
-      width: calc(100% - 200px)
-
-      +small
-        width: calc(100% - 300px)
-
-      +medium
-        width: calc(100% - 400px)
-
-    .text
-      display: flex
-      flex-direction: column
-      justify-content: flex-end
-      +outer-offset(padding)
-      width: 200px
-      background-color: $backgroundWhite
-
-      +small
-        width: 300px
-
-      +medium
-        width: 400px
-
-  .block
-    display: flex
-    overflow: hidden
-    margin-bottom: 0
-    border-radius: $borderRadius
-    padding: 0
+    .owl-stage-outer
+      padding: 40px 0
 
     .item
-      position: relative
-      height: 100%
-
-    img
-      height: 100%
-      object-fit: cover
-
-    .text
-      position: absolute
-      width: 100%
-      bottom: 0
-      +outer-offset(padding)
-      padding-top: 50px
-      color: $white
-      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0,0,0,0))
-
-  .thumbnails
-    display: flex
-
-    a
-      display: inline-block
       overflow: hidden
       border-radius: $borderRadius
       height: 100%
-      transition: box-shadow .3s
-
-      &:focus, &:active
-        box-shadow: 0 0 0 3px $primaryColor
 
       img
-        height: 100%
+        height: 140px
         object-fit: cover
-        transition: transform .3s
 
-        &:hover
-          transform: scale(1.05)
+      .text
+        +outer-offset(padding)
+        height: calc(100% - 140px)
+        font-size: 13px
+        background-color: $backgroundWhite
+
+    .owl-item
+      transition: .3s
+      
+      &:not(.center)
+        opacity: .3
+        transform: scale(0.9)
+
+      &.center
+        z-index: 10
+        transform: scale(1.2)
+
+    .owl-dots span
+      margin: 5px
+      border-radius: 0
+      height: 2px
+      width: 20px
+
+  .desktop
+    display: none
+    width: 100%
+
+    +medium
+      display: block
+
+    .item
+      display: flex
+      overflow: hidden
+      border: 2px solid $borderGrey
+      border-radius: $borderRadius
+      height: 300px
+
+      +small
+        height: 400px
+
+      +medium
+        height: 500px
+
+      img
+        object-fit: cover
+        width: calc(100% - 200px)
+
+        +small
+          width: calc(100% - 300px)
+
+        +medium
+          width: calc(100% - 400px)
+
+      .text
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        +outer-offset(padding)
+        width: 200px
+        background-color: $backgroundWhite
+
+        +small
+          width: 300px
+
+        +medium
+          width: 400px
+
+    .thumbnails
+      display: flex
+
+      a
+        display: inline-block
+        overflow: hidden
+        border-radius: $borderRadius
+        height: 100%
+        transition: box-shadow .3s
+
+        &:focus, &:active
+          box-shadow: 0 0 0 3px $primaryColor
+
+        img
+          height: 100%
+          object-fit: cover
+          transition: transform .3s
+
+          &:hover
+            transform: scale(1.05)
