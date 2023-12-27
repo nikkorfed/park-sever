@@ -1,6 +1,4 @@
 section.advantages
-  // background-color: $backgroundLightGrey
-
   // +large
     height: 100vh
     min-height: 600px
@@ -20,52 +18,91 @@ section.advantages
       background-color: $borderGrey
 
   .max-width
-    margin: 0 auto
+    margin: auto
     text-align: center
 
-  h2
-    display: flex
-    flex-direction: column
-    align-items: center
+  .subtitle .link
+    border-bottom: 1px solid transparentize($black, .7)
+    // color: $primaryColor
 
-  .advantage
+  .item
     display: flex
-    align-items: flex-start
-    position: relative
-    +outer-offset(margin-bottom)
+    overflow: hidden
+    border: 2px solid $borderGrey
+    border-radius: $borderRadius
+    height: 300px
+
+    +small
+      height: 400px
+
+    +medium
+      height: 500px
 
     img
-      +outer-offset(margin-right)
-      height: 60px
-      width: 60px
+      object-fit: cover
+      width: calc(100% - 200px)
 
-      // +medium
-        height: 80px
-        width: 80px  
+      +small
+        width: calc(100% - 300px)
 
-    p
-      margin-bottom: 0
+      +medium
+        width: calc(100% - 400px)
 
-  .columns > div:first-child > .advantage::after
+    .text
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      +outer-offset(padding)
+      width: 200px
+      background-color: $backgroundWhite
+
+      +small
+        width: 300px
+
+      +medium
+        width: 400px
+
+  .block
     display: flex
-    justify-content: center
-    align-items: center
-    position: absolute
-    top: 14px
-    left: 48px
-    border-radius: 100%
-    height: 16px
-    width: 16px
-    font-size: 15px
-    font-weight: 900
-    content: '6'
-    color: $primaryColor
-    background-color: $backgroundWhite
+    overflow: hidden
+    margin-bottom: 0
+    border-radius: $borderRadius
+    padding: 0
 
-    // +medium
-      top: 18px
-      left: 66px
-      height: 20px
-      width: 20px
-      font-size: 18px
-    
+    .item
+      position: relative
+      height: 100%
+
+    img
+      height: 100%
+      object-fit: cover
+
+    .text
+      position: absolute
+      width: 100%
+      bottom: 0
+      +outer-offset(padding)
+      padding-top: 50px
+      color: $white
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0,0,0,0))
+
+  .thumbnails
+    display: flex
+
+    a
+      display: inline-block
+      overflow: hidden
+      border-radius: $borderRadius
+      height: 100%
+      transition: box-shadow .3s
+
+      &:focus, &:active
+        box-shadow: 0 0 0 3px $primaryColor
+
+      img
+        height: 100%
+        object-fit: cover
+        transition: transform .3s
+
+        &:hover
+          transform: scale(1.05)

@@ -7,10 +7,16 @@ $(document).ready(function () {
     animateIn: "fadeIn",
     animateOut: "fadeOut",
   });
-  $("#advantages-2 .owl-carousel, #main-menu .owl-carousel").owlCarousel({
+  $("#main-menu .owl-carousel").owlCarousel({
     items: 1,
     loop: true,
     autoplay: true,
     autoplayTimeout: 5000,
+  });
+  $("#advantages .owl-carousel").owlCarousel({
+    items: 1,
+    margin: 10,
+    loop: true,
+    startPosition: "URLHash",
   });
 });
