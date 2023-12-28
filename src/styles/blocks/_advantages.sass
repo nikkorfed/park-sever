@@ -41,13 +41,13 @@ section.advantages
       height: 100%
 
       img
-        height: 140px
+        height: 80px
         object-fit: cover
 
       .text
-        +outer-offset(padding)
-        height: calc(100% - 140px)
-        font-size: 13px
+        +inner-offset(padding)
+        height: calc(100% - 80px)
+        font-size: 11px
         background-color: $backgroundWhite
 
     .owl-item
@@ -59,7 +59,7 @@ section.advantages
 
       &.center
         z-index: 10
-        transform: scale(1.2)
+        transform: scale(1.3)
 
     .owl-dots span
       margin: 5px
