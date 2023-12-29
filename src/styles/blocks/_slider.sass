@@ -12,7 +12,7 @@ section.slider
     height: 600px
 
   +large
-    height: calc(100vh + 60px)
+    height: calc(100vh)
 
   .background
     position: absolute
@@ -102,14 +102,24 @@ section.slider
       font-size: 24px
 
 section.booking
-  +negative-outer-offset(margin-top)
+  margin-top: -20px
   border-bottom-left-radius: $borderRadius
   border-bottom-right-radius: $borderRadius
-  +outer-offset(padding-left, padding-right, padding-bottom)
+  +outer-offset(padding-left, padding-right)
   background-color: $backgroundBlack
 
-  +large
-    margin-top: -60px
+  @media (min-width: 992px)
+    margin-top: -315px
+    min-height: 315px
+    background-color: unset
+
+  @media (min-width: 1006px)
+    margin-top: -165px
+    min-height: 165px
+
+  @media (min-width: 1136px)
+    margin-top: -100px
+    min-height: 100px
 
   .container
     overflow: hidden
