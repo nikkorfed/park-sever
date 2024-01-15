@@ -14,7 +14,7 @@ $(document).ready(function () {
     autoplayTimeout: 5000,
   });
   $("#advantages .mobile .owl-carousel").owlCarousel({
-    items: 3,
+    items: 1.4,
     loop: true,
     center: true,
   });
