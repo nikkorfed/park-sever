@@ -1,3 +1,48 @@
+section.houses
+  .max-width
+    margin: auto
+    text-align: center
+
+  .columns
+    display: flex
+
+  .house
+    display: inline-block
+    overflow: hidden
+    position: relative
+    border-radius: $borderRadius
+
+    img
+      display: block
+      transition: transform .3s
+
+    .text
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      +inner-offset(padding)
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) , transparent 100px)
+
+    h3
+      margin-bottom: 0
+      color: white
+
+    .subtitle
+      margin-bottom: 0
+      font-weight: bold
+      color: $lightGrey
+
+    &:hover img
+      transform: scale(1.05)
+
+    &:focus, &:active
+      box-shadow: 0 0 0 3px $primaryColor
+  
 section.house
   .max-width
     margin: auto
