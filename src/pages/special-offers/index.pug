@@ -1,0 +1,13 @@
+extends /layout
+
+append variables
+  - var category = 'Услуги'
+  - var title = 'Специальные предложения'
+  - var subtitle = 'Спецпредложения и акции при размещении в наших домиках — скидка при проживании несколько дней, скидка при раннем бронировании, а также организация праздников.'
+  - var path = {};
+
+block body
+  //- include /main
+  include /special-offers
+  include /additional-offers
+  include /contact
