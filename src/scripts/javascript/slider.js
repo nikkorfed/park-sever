@@ -24,4 +24,9 @@ $(document).ready(function () {
     loop: true,
     startPosition: "URLHash",
   });
+  $("#retriver-club .owl-carousel").owlCarousel({
+    items: 2,
+    loop: true,
+    // center: true,
+  });
 });

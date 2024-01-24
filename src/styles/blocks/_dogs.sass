@@ -30,6 +30,38 @@ section.dogs
   .button-simple
     +outer-offset(margin-bottom)
 
+  .dogs-carousel
+    +outer-offset(margin-bottom)
+    +negative-outer-offset(margin-left, margin-right)
+    padding: 0 #{$outerOffset / 2}
+    width: calc(100% + #{$outerOffset * 2})
+
+    +medium
+      padding: 0 #{$mediumOuterOffset / 2}
+      width: calc(100% + #{$mediumOuterOffset * 2})
+
+  .item
+    overflow: hidden
+    margin: 0 #{$outerOffset / 2}
+    border-radius: $borderRadius
+    height: 100%
+
+    +medium
+      margin: 0 #{$mediumOuterOffset / 2}
+
+    img
+      height: 260px
+      object-fit: cover
+
+    .text
+      display: flex
+      justify-content: center
+      align-items: center
+      +outer-offset(padding)
+      height: calc(100% - 260px)
+      text-align: center
+      background-color: $backgroundWhite
+
   .columns
     justify-content: center
 
@@ -41,17 +73,17 @@ section.dogs
     border-radius: $borderRadius
     padding-bottom: 100%
 
+    img
+      position: absolute
+      height: 100%
+      object-fit: cover
+      transition: transform .3s
+
+      &:hover
+        transform: scale(1.05)
+
   .half .photo
     padding-bottom: 47.5%
 
     +medium
       padding-bottom: 46%
-
-  img
-    position: absolute
-    height: 100%
-    object-fit: cover
-    transition: transform .3s
-
-    &:hover
-      transform: scale(1.05)
