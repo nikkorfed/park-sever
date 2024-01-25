@@ -12,9 +12,17 @@ section.houses
     position: relative
     border-radius: $borderRadius
 
+
     img
       display: block
-      transition: transform .3s
+      transition: filter .3s, transform .3s
+
+    &:not(.active) img
+      filter: grayscale(50%) brightness(50%)
+
+    &:hover img, &.active img
+      filter: none
+      transform: scale(1.05)
 
     .text
       display: flex
@@ -36,14 +44,10 @@ section.houses
       margin-bottom: 0
       font-weight: bold
       color: $lightGrey
-
-    &:hover img
-      transform: scale(1.05)
-
-    &:focus, &:active
-      box-shadow: 0 0 0 3px $primaryColor
   
 section.house
+  display: none
+
   .max-width
     margin: auto
     text-align: center
