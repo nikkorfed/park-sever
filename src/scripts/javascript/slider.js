@@ -24,6 +24,11 @@ $(document).ready(function () {
     loop: true,
     startPosition: "URLHash",
   });
+  $("#houses .owl-carousel").owlCarousel({
+    items: 1,
+    margin: 10,
+    loop: true,
+  });
   $("#retriver-club .owl-carousel").owlCarousel({
     items: 2,
     loop: true,

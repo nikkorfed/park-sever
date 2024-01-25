@@ -1,25 +1,44 @@
-section.houses
+section.houses#houses
   .wrapper
     .max-width
       h2 Дома для проживания
-    .columns
-      .col-md-4
-        a.house(href="#house-2")
-          img(src='/images/accommodation/01.jpg')
-          .text
-            h3 Стеклянный дом №2
-            .subtitle Строится
-      .col-md-4
+    .mobile
+      .houses-carousel.owl-carousel.owl-theme
         a.house.active(href="#house-1")
           img(src='/images/accommodation/01.jpg')
           .text
             h3 Стеклянный дом №1
-      .col-md-4
+            .button-arrow Подробнее
+        a.house(href="#house-2")
+          img(src='/images/accommodation/01.jpg')
+          .text
+            h3 Стеклянный дом №2
+            .button-arrow Подробнее
         a.house(href="#house-3")
           img(src='/images/accommodation/01.jpg')
           .text
             h3 Стеклянный дом №3
-            .subtitle Строится
+            .button-arrow Подробнее
+    .desktop
+      .columns
+        .col-md-4
+          a.house(href="#house-2")
+            img(src='/images/accommodation/01.jpg')
+            .text
+              h3 Стеклянный дом №2
+              .button-arrow Подробнее
+        .col-md-4
+          a.house.active(href="#house-1")
+            img(src='/images/accommodation/01.jpg')
+            .text
+              h3 Стеклянный дом №1
+              .button-arrow Подробнее
+        .col-md-4
+          a.house(href="#house-3")
+            img(src='/images/accommodation/01.jpg')
+            .text
+              h3 Стеклянный дом №3
+              .button-arrow Подробнее
 section.house#house-1(style="display: block")
   .wrapper
     .max-width

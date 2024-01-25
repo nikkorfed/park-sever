@@ -1,7 +1,8 @@
 section.slider
   position: relative
   overflow: hidden
-  border-radius: $borderRadius
+  border-top-left-radius: $borderRadius
+  border-top-right-radius: $borderRadius
   height: 400px
   color: #f1d4c2
   background-image: linear-gradient(to bottom, transparentize($backgroundBlack, .5), transparentize($backgroundBlack, .5))
@@ -103,7 +104,6 @@ section.slider
       font-size: 24px
 
 section.booking
-  margin-top: -20px
   border-bottom-left-radius: $borderRadius
   border-bottom-right-radius: $borderRadius
   +outer-offset(padding-left, padding-right)
