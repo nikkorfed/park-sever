@@ -42,27 +42,3 @@ section.contact
     line-height: 1
     font-weight: bold
     color: $black
-
-  & + .info
-    .wrapper
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
-
-      // &::before
-        +outer-offset(margin-bottom)
-        height: 100px
-        width: 1px
-        content: ''
-        background-color: $borderGrey
-
-    .max-width
-      margin: auto
-      text-align: center
-      // background-color: $backgroundLightGrey
-
-    iframe
-      overflow: hidden
-      // border: 2px solid $borderGrey
-      border-radius: $borderRadius

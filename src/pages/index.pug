@@ -5,22 +5,31 @@ append variables
   - var seoTitle = 'Эко-отель «Парк Север» | Официальный сайт'
 
 block body
-  include /slider
-  include /welcome
-  //- include /description
-  //- include /advantages-old
-  include /main-menu
-  include /advantages
-  include /about
-  //- include /reservation
-  //- include /services
-  //- include /quality
-  //- include /technology
-  //- include /prices
-  //- include /equipment
-  //- include /reviews
-  //- include /brands
-  //- include /photos
-  //- include /faq
-  //- include /chat
-  include /contact
+  #fullpage
+    .section
+      include /slider
+    .section
+      include /welcome
+    //- include /description
+    //- include /advantages-old
+    .section
+      include /main-menu
+    .section
+      include /advantages
+    .section
+      include /about
+    //- include /reservation
+    //- include /services
+    //- include /quality
+    //- include /technology
+    //- include /prices
+    //- include /equipment
+    //- include /reviews
+    //- include /brands
+    //- include /photos
+    //- include /faq
+    //- include /chat
+    .section
+      include /contact
+    .section
+      include /map
