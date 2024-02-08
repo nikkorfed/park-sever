@@ -103,13 +103,17 @@ section.advantages
       .text
         display: flex
         flex-direction: column
-        justify-content: flex-end
+        // justify-content: flex-end
         +outer-offset(padding)
         width: 200px
+        font-size: 17px
         background-color: $backgroundWhite
 
         +small
           width: 300px
+
+        +medium
+          font-size: 18px
 
         +large
           width: 400px
