@@ -1,7 +1,7 @@
 section.territory
   .max-width
-    // margin: auto
-    // text-align: center
+    margin: auto
+    text-align: center
 
   h2
     // display: flex
@@ -19,14 +19,23 @@ section.territory
 
     & > div
       padding: 0
+  
+  video
+    display: block
+    +outer-offset(margin-bottom)
+    border-radius: $borderRadius
+    width: 100%
+
+  .columns
+    justify-content: center
 
   .photo
     display: block
     overflow: hidden
     position: relative
-    border: 1px solid #f8f8f8
-    padding-bottom: 50%
-    cursor: pointer
+    +outer-offset(margin-bottom)
+    border-radius: $borderRadius
+    padding-bottom: 100%
 
     img
       position: absolute
@@ -37,7 +46,19 @@ section.territory
       &:hover
         transform: scale(1.05)
 
-  video
-    // +outer-offset(margin-top)
-    border-radius: $borderRadius
-    width: 100%
+  .col-8 .photo
+    padding-bottom: 47.5%
+
+  .col-sm-3 .photo
+    +small
+      padding-bottom: 100%
+
+  .col-sm-6 .photo
+    +small
+      padding-bottom: 47.5%
+
+  .half .photo
+    padding-bottom: 47.5%
+
+    +medium
+      padding-bottom: 46%
