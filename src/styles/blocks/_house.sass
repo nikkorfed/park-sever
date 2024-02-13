@@ -1,72 +1,4 @@
-section.houses
-  .max-width
-    margin: auto
-    text-align: center
-
-  .mobile
-    +medium
-      display: none
-
-  .desktop
-    display: none
-
-    +medium
-      display: block
-
-  .columns
-    display: flex
-
-  .house
-    display: block
-    overflow: hidden
-    position: relative
-    border-radius: $borderRadius
-    height: 260px
-    
-    +medium
-      height: 300px
-
-    img
-      display: block
-      height: 100%
-      object-fit: cover
-      transition: filter .3s, transform .3s
-
-    &:not(.active) img
-      filter: grayscale(50%) brightness(50%)
-
-    // &.active img
-    //   filter: none
-    //   transform: scale(1.05)
-
-    .text
-      display: flex
-      flex-direction: column
-      justify-content: flex-end
-      align-items: flex-start
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      bottom: 0
-      +outer-offset(padding)
-      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) , transparent 100px)
-
-    h3
-      margin-bottom: 0
-      color: white
-
-    .subtitle
-      margin-bottom: 0
-      font-weight: bold
-      color: $lightGrey
-
-    .button-arrow
-      +inner-offset(margin-top)
-  
 section.house
-  display: none
-
   .max-width
     margin: auto
     text-align: center
@@ -77,6 +9,11 @@ section.house
 
     +medium
       flex-direction: row
+
+  .warning
+    display: inline-block
+    border-bottom: 1px solid transparentize(tomato, .5)
+    color: tomato
 
   b
     color: $black

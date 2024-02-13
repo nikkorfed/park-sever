@@ -1,0 +1,71 @@
+extends /layout
+
+append variables
+  - var category = 'Услуги'
+  - var title = 'Стеклянный дом №2'
+  - var subtitle = 'Стеклянный гостевой домик вдали от городской суеты и забот. Оборудован современной мебелью и удобной кухней, имеет голосовое управление через Алису и высокоскоростной интернет до 150 Мбит/сек.'
+  - var path = {};
+
+block body
+  //- include /main
+  include /houses
+  section.house
+    .wrapper
+      .max-width
+        h2 Описание Стеклянного дома №2
+      .columns
+        .col-md-7.slideIn.each
+          h3.warning Ведутся строительные работы
+          p #[b Комплектация Стеклянного дома №2:]
+          ul
+            li Кухня-гостиная — двухместный диван, телевизор, регулируемый по высоте (с подписками Okko, Ivi), стол, стулья, кухонный гарнитур, ПММ, холодильник, чайник, индукционная плита, микроволновая печь, вытяжка, а также полный комплект посуды и столовых приборов;
+            li Спальная — двуспальная кровать размера King-size, шторы Blackout из премиального текстиля с возможностью полного закрытия для приватного отдыха;
+            li Ванная — унитаз, душевая, ванная и сауна с панорамным видом, раковина, зеркало, фен;
+            li Индивидуальный набор — халат, тапочки, косметический набор, полотенца;
+            li Набор продуктов для приготовления завтрака;
+            li Настольные игры для веселой компании;
+            li Аптечка с необходимым набором медикаментов;
+            li По запросу — детская кроватка, детский стульчик для кормления;
+            li Безопасность — огнетушитель, видеонаблюдение снаружи здания, датчики дыма, закрытая территория.
+          p #[b Особенности:]
+          ul
+            li Панорамный вид из окон на лес с молодыми берёзами и соснами;
+            li Мангальная зона, открытая терасса с зоной отдыха и комплектом мебели;
+            li Умный дом с голосовым управлением через Алису, включение/выключение света в доме и на улице, регулировка температуры в доме (климат-контроль), изменение высоты телевизора, беспроводные зарядки и множество сценариев освещения;
+            li Высокоскоростной интернет — Wi-Fi 6, скорость до 150 Мбит/сек, несколько точек доступа с бесшовным роумингом (переключение между ними без потери сигнала), соединение точек оптоволоконным кабелем (уверенный сигнал в любой точке парка);
+            li Парковка для автомобилей рядом с домом.
+          p #[b Завершение строительства:]
+          p Май 2024 года.
+          p #[b Доступен для бронирования:]
+          p Лето 2024 года.
+        .col-md-5.slideIn.each
+          img(src='/images/accommodation/house-1/main.jpeg')
+  section.photos#photos
+    .wrapper
+      .max-width
+        .overtitle Фотографии
+        h2 Как выглядит домик
+      .columns.slideIn.each
+        .col-4.col-md-3.col-lg-2
+          a.photo(data-fancybox="photos" href="/images/accommodation/house-2/1.jpg")
+            img(src='/images/accommodation/house-2/1.jpg')
+        .col-4.col-md-3.col-lg-2
+          a.photo(data-fancybox="photos" href="/images/accommodation/house-2/2.jpg")
+            img(src='/images/accommodation/house-2/2.jpg')
+        .col-4.col-md-3.col-lg-2
+          a.photo(data-fancybox="photos" href="/images/accommodation/house-2/3.jpg")
+            img(src='/images/accommodation/house-2/3.jpg')
+        .col-4.col-md-3.col-lg-2
+          a.photo(data-fancybox="photos" href="/images/accommodation/house-2/4.jpg")
+            img(src='/images/accommodation/house-2/4.jpg')
+        .col-4.col-md-3.col-lg-2
+          a.photo(data-fancybox="photos" href="/images/accommodation/house-2/5.jpg")
+            img(src='/images/accommodation/house-2/5.jpg')
+        .col-4.col-md-3.col-lg-2
+          a.photo(data-fancybox="photos" href="/images/accommodation/house-2/6.jpg")
+            img(src='/images/accommodation/house-2/6.jpg')
+  //- include /features
+  include /entertainment
+  include /about
+  include /contact
+  include /map

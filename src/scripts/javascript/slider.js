@@ -25,9 +25,18 @@ $(document).ready(function () {
     startPosition: "URLHash",
   });
   $("#houses .owl-carousel").owlCarousel({
-    items: 1,
-    margin: 10,
-    loop: true,
+    responsive: {
+      0: {
+        items: 1,
+        margin: 10,
+        loop: true,
+      },
+      768: {
+        items: 3,
+        margin: 30,
+        loop: false,
+      },
+    },
   });
   $("#retriver-club .owl-carousel").owlCarousel({
     items: 3,
