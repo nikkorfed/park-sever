@@ -30,7 +30,7 @@ $(document).ready(function () {
     loop: true,
   });
   $("#retriver-club .owl-carousel").owlCarousel({
-    items: 2,
+    items: 3,
     loop: true,
     // center: true,
   });
