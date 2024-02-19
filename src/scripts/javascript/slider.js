@@ -43,4 +43,22 @@ $(document).ready(function () {
     loop: true,
     // center: true,
   });
+  $("#animals .owl-carousel").owlCarousel({
+    loop: true,
+    autoplay: true,
+    responsive: {
+      0: {
+        items: 2,
+        margin: 20,
+      },
+      768: {
+        items: 3,
+        margin: 30,
+      },
+      992: {
+        items: 4,
+        margin: 30,
+      },
+    },
+  });
 });
