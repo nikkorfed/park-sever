@@ -24,12 +24,28 @@ section.animals
   .owl-carousel
     +outer-offset(margin-bottom)
 
+    .owl-stage
+      height: 300px
+
+    .owl-item
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+
+    .block
+      transition: height .3s, opacity .3s
+
+    .owl-item:not(.center) .block
+      height: 90%
+      opacity: .5
+
   .block
     overflow: hidden
     position: relative
     margin-bottom: 0
     padding: 0
-    height: 300px
+    height: 100%
     width: 100%
 
   img

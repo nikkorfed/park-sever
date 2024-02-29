@@ -43,20 +43,40 @@ $(document).ready(function () {
     loop: true,
     // center: true,
   });
-  $("#animals .owl-carousel").owlCarousel({
+  $("#animals .owl-carousel:not(.even)").owlCarousel({
     loop: true,
+    center: true,
     autoplay: true,
     responsive: {
       0: {
-        items: 2,
+        items: 1,
         margin: 20,
       },
       768: {
-        items: 3,
+        items: 2,
         margin: 30,
       },
       992: {
+        items: 3,
+        margin: 30,
+      },
+    },
+  });
+  $("#animals .owl-carousel.even").owlCarousel({
+    loop: true,
+    center: true,
+    autoplay: true,
+    responsive: {
+      0: {
+        items: 3,
+        margin: 20,
+      },
+      768: {
         items: 4,
+        margin: 30,
+      },
+      992: {
+        items: 5,
         margin: 30,
       },
     },
