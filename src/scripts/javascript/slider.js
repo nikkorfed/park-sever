@@ -39,9 +39,20 @@ $(document).ready(function () {
     },
   });
   $("#retriver-club .owl-carousel").owlCarousel({
-    items: 3,
     loop: true,
+    autoplay: true,
     // center: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      576: {
+        items: 2,
+      },
+      768: {
+        items: 3,
+      },
+    },
   });
   $("#animals .owl-carousel:not(.even)").owlCarousel({
     loop: true,
@@ -68,6 +79,10 @@ $(document).ready(function () {
     autoplay: true,
     responsive: {
       0: {
+        items: 2,
+        margin: 20,
+      },
+      576: {
         items: 3,
         margin: 20,
       },

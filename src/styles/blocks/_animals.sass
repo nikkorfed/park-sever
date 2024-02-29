@@ -24,6 +24,16 @@ section.animals
   .owl-carousel
     +outer-offset(margin-bottom)
 
+    &.even
+      margin-left: -20px
+      margin-right: -20px
+      width: calc(100% + 40px)
+
+      +small
+        margin-left: 0
+        margin-right: 0
+        width: auto 
+
     .owl-stage
       height: 300px
 
