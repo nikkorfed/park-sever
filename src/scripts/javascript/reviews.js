@@ -1,10 +1,8 @@
-init("drive2");
 init("yandex");
-init("google");
 
 async function init(from) {
   let target = $("." + from);
-  let data = await request(from);
+  let data = await request();
   let options = {
     // autoplay: true,
     autoplayHoverPause: true,
@@ -24,10 +22,8 @@ async function init(from) {
 
   target.find(".quantity").text(data.quantity);
   target.find(".view-all").attr("href", data.url);
-
-  if (from == "yandex") target.find(".stars").html(data.stars);
-  if (from == "google") target.find(".stars .filler").css("width", data.stars + "%");
-  if (from == "yandex" || from == "google") target.find(".rating").html(data.rating);
+  target.find(".stars").html(data.stars);
+  target.find(".rating").html(data.rating);
 
   data.reviews.forEach((review) => target.find(".container").append(render(review, from)));
   target.find(".container").owlCarousel(options);
@@ -41,27 +37,15 @@ async function init(from) {
   });
 }
 
-async function request(from) {
-  let response = await fetch("https://m72sever.ru/scripts/getReviews.php?from=" + from);
+async function request() {
+  let response = await fetch("/data/reviews.json");
   return await response.json();
 }
 
-function render({ url, image, user, date, positive, text, carImage, title, car }, from) {
-  image = from == "yandex" ? image : `<img class="image" src="${image}" loading="lazy">`;
-
-  let icon = car
-    ? positive
-      ? '<img class="icon" src="/images/icons/positive.svg" loading="lazy">'
-      : '<img class="icon" src="/images/icons/negative.svg" loading="lazy">'
-    : "";
-
-  let article = car
-    ? `<div class="article"><img class="image" src="${carImage}" loading="lazy"><div><div class="title">${title}</div><div class="car">${car}</div></div></div>`
-    : "";
-
+function render({ url, image, user, date, text }) {
   let tag = url ? `a href=${url}` : "div";
 
-  return `<${tag} class="review"><div class="head">${image}<div><div class="user">${user}</div><div class="date">${date}</div></div>${icon}</div><div class="text"><div class="scrollable"><p>${text}</p></div></div>${article}</${
+  return `<${tag} class="review"><div class="head">${image}<div><div class="user">${user}</div><div class="date">${date}</div></div></div><div class="text"><div class="scrollable"><p>${text}</p></div></div></${
     url ? "a" : "div"
   }>`;
 }
