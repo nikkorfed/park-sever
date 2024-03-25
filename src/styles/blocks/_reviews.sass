@@ -1,12 +1,13 @@
 .reviews
-  background-color: $backgroundLightGrey
 
   .max-width
     margin: auto
     text-align: center
 
   .yandex
+    overflow: hidden
     +negative-outer-offset(margin-left, margin-right)
+    border-radius: $borderRadius
     
     +small
       margin: 0
@@ -105,7 +106,7 @@
         background-size: 12px
 
   .container
-    +outer-offset(margin-bottom)
+    // +outer-offset(margin-bottom)
 
   .owl-item
     background-color: $backgroundWhite
