@@ -37,16 +37,19 @@ section.services#services
             .category Развлечения
             .text
               h3 Катание на мотоцикле
+              .subtitle.unavailable Временно недоступно
               .subtitle Аренда мотоцикла для катания по лесу и ближайшим дорогам.
       .col-md-6.col-lg-8.col-xl-6
-        a.block(data-fancybox data-src='#snowmobile')
+        //- a.block(data-fancybox data-src='#snowmobile')
+        .block
           img.image(src="/images/services/snowmobile-3.jpg")
           .overlay
             .category Развлечения
             .text
               h3 Катание на снегоходе
+              .subtitle.unavailable Временно недоступно
               .subtitle Cнегоход Arctic Cat M1100 Turbo, мощность 177 л.с., максимальная скорость 190 км/ч, 4-тактный двигатель 1100 см3 Turbo. Стоимость — 8 000 ₽ / час.
-              .button-arrow Подробнее
+              //- .button-arrow Подробнее
       .col-md-6.col-lg-4.col-xl-3
         .block
           img.image(src="/images/services/bike.jpg")
@@ -54,7 +57,7 @@ section.services#services
             .category Развлечения
             .text
               h3 Катание на велосипеде
-              .subtitle Катание на прогулочном велосипеде по живописному лесу.
+              .subtitle Без аренды — катание только на своём велосипеде.
       .col-md-6.col-lg-4.col-xl-3
         .block
           img.image(src="/images/services/retromobile.jpg")
@@ -62,6 +65,7 @@ section.services#services
             .category Развлечения
             .text
               h3 Ретромобиль ГАЗ М-72
+              .subtitle.unavailable Временно недоступно
               .subtitle Катание на ретро автомобиле по ближайшей округе.
       //- .col-md-6.col-lg-4.col-xl-3
         .block
@@ -149,6 +153,18 @@ section.services#services
       .col-6
         a.photo(data-fancybox='buggy' data-src='/images/services/buggy/2.jpg')
           img(src='/images/services/buggy/2.jpg')
+      .col-6
+        a.photo(data-fancybox='buggy' data-src='/images/services/buggy/3.jpg')
+          img(src='/images/services/buggy/3.jpg')
+      .col-6
+        a.photo(data-fancybox='buggy' data-src='/images/services/buggy/4.jpg')
+          img(src='/images/services/buggy/4.jpg')
+      .col-6
+        a.photo(data-fancybox='buggy' data-src='/images/services/buggy/5.jpg')
+          img(src='/images/services/buggy/5.jpg')
+      .col-6
+        a.photo(data-fancybox='buggy' data-src='/images/services/buggy/6.jpg')
+          img(src='/images/services/buggy/6.jpg')
   .popup#snowmobile
     .overtitle Развлечения
     h2 Катание на снегоходе

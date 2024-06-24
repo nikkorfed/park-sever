@@ -53,8 +53,13 @@ section.services
         height: 0
         opacity: 0
 
+      .subtitle.unavailable
+        height: unset
+        opacity: 1
+        color: tomato
+
       .button-arrow
-        +inner-offset(margin-top)
+        // +inner-offset(margin-top)
 
     &:hover
       .image
@@ -63,11 +68,14 @@ section.services
       .overlay
         background-color: rgba(0, 0, 0, 0.3)
 
-        .subtitle
+        .subtitle:not(.unavailable)
           +inner-offset(margin-top)
           height: unset
           opacity: 1
           transition: opacity .3s
+
+        .button-arrow
+          +inner-offset(margin-top)
 
   a.block
     cursor: pointer
