@@ -1,7 +1,7 @@
 const { src, dest, series, parallel, watch } = require("gulp");
 const del = require("del");
 const pug = require("gulp-pug");
-const sass = require("gulp-sass")(require("node-sass"));
+const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
 
 const fs = require("fs/promises");
