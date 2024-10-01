@@ -9,11 +9,14 @@ header(class=(transparentHeader && 'transparent'))
         span
         span
         span
-      a.logo(href='/') 
-        img(src='/images/logo-blue.png?2')
-        .text
-          .name Парк Север
-          .label Эко-отель
+      .logo-container
+        a.logo(href='/') 
+          img(src='/images/logo-blue.png?2')
+          .text
+            .name Парк Север
+            .label Эко-отель
+        a.special-offer(href='/special-offers')
+          img(src='/images/special-offer.png')
       .menu
         a(href="/") Главная
         a(href="/accommodation/house-1") Проживание
