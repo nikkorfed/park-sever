@@ -1,0 +1,41 @@
+extends /layout
+
+append variables
+  - var category = 'Раздел'
+  - var title = 'Правовая информация'
+  - var path = {};
+
+block body
+  //- include /main
+  section.info.grey
+    .wrapper
+      .max-width
+        .overtitle Информация
+        h2 Правовая информация
+      .block.bank-details
+        h3 Реквизиты
+        table
+          tr
+            td Расчётный счёт
+            td 40802810801270003715
+          tr
+            td Название банка
+            td ООО "Банк Точка"
+          tr
+            td БИК
+            td 044525104
+          tr
+            td Корреспондентский счёт
+            td 30101810745374525104
+          tr
+            td Наименование
+            td Индивидуальный предприниматель Дерюгин Павел Сергеевич
+          tr
+            td ИНН
+            td 773170493306
+          tr
+            td ОГРНИП
+            td 314774628000801
+          tr
+            td Юридический адрес
+            td 121351, Москва г, Ярцевская ул, дом № 6, квартира 17
