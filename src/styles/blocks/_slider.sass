@@ -33,6 +33,17 @@ section.slider
       object-fit: cover
       animation: zoomIn 15s infinite ease-in-out alternate
 
+      &.image-desktop
+        display: none
+
+        +small
+          display: block
+
+      &.image-mobile
+        display: block
+
+        +small
+          display: none
 
   .wrapper
     display: flex
