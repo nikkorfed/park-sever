@@ -80,7 +80,9 @@ h3
 
 p
   margin: 0
-  +inner-offset(margin-bottom)
+
+  &:not(:last-child)
+    +inner-offset(margin-bottom)
 
   a
     border-bottom: 1px solid transparentize($primaryColor, .5)
