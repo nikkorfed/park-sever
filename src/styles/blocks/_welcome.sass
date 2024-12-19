@@ -36,6 +36,7 @@ section.welcome
     text-align: center
 
   .text-1, .text-2, .text-3, .text-4, .text-5
+    +inner-offset(margin-bottom)
     opacity: 0
 
     +large
@@ -81,7 +82,7 @@ section.welcome
     animation: fadeInOut 15s ease-in-out 10s both infinite
 
   .button-arrow
-    +outer-offset(margin-bottom)
+    +inner-offset(margin-bottom)
     color: $black
     background-image: url("/images/icons/arrow-right.svg")
 
