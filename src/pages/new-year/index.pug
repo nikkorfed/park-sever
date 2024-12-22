@@ -1,0 +1,14 @@
+extends /layout
+
+append variables
+  - var category = 'Праздники'
+  - var title = 'Новый Год'
+  - var subtitle = 'Спецпредложения и акции при размещении в наших домиках — скидка при проживании несколько дней, скидка при раннем бронировании, а также организация праздников.'
+  - var path = {};
+
+block body
+  //- include /main
+  include /new-year
+  include /gift-cards
+  include /contact
+  include /map
