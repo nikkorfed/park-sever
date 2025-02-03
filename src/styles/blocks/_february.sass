@@ -1,0 +1,55 @@
+section.february-14, section.february-23
+  line-height: 1.2
+
+  .max-width
+    margin: auto
+    text-align: center
+
+  .photo
+    display: block
+    overflow: hidden
+    position: relative
+    +outer-offset(margin-bottom)
+    border: 1px solid $backgroundLightGrey
+    border-radius: $borderRadius
+    padding-bottom: 100%
+
+    img
+      position: absolute
+      height: 100%
+      object-fit: cover
+      transition: transform .3s
+
+      &:hover
+        transform: scale(1.1)
+  
+section.february-14
+  h2
+    text-decoration: underline
+    text-decoration-thickness: 1px
+    text-underline-offset: 10px
+    color: red
+
+  .quote
+    font-size: 18px
+    font-family: 'Monotype Corsiva'
+    font-weight: bold
+    color: #333
+
+section.february-23
+  h2
+    text-decoration: underline
+    text-decoration-thickness: 1px
+    text-underline-offset: 10px
+    color: #5a851e
+
+  p
+    text-align: center
+
+  .bold
+    margin-right: 4px
+    font-size: 22px
+    font-family: 'Monotype Corsiva'
+
+    +medium
+      font-size: 26px
